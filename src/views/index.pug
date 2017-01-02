@@ -1,0 +1,280 @@
+doctype html
+html
+  include shared/head.pug
+
+  body
+
+    .flex.h100
+      //SIDEBAR::START
+      section.sidebar
+        .sidebar__wrapper
+          //.sidebar__image.rounded
+            img(src="https://spb.hh.ru/photo/473026051.jpeg?t=1482355985&h=kuztcNaQepX-VJO52qpGvQ").img-responsive
+          .sidebar__name SK
+          .sidebar__navigation
+            a(href="#sectionAbout") About
+            a(href="#sectionPortfolio") Projects
+            a(href="#sectionCalculator") Prices
+            a(href="#sectionContact") Contact
+          .sidebar__socials
+            a.tooltip(href="skype:khmelevskoysergey?chat" target="_blank")
+              i.icon-skype
+              .tooltip__wrapper
+                .tooltip__inner
+                  span skype
+            a.tooltip(href="http://telegram.me/khmelevskoy_s" target="_blank")
+              i.icon-telegram
+              .tooltip__wrapper
+                .tooltip__inner
+                  span telegram
+            a.tooltip(href="https://www.behance.net/mangodigital" target="_blank")
+              i.icon-behance2
+              .tooltip__wrapper
+                .tooltip__inner
+                  span behance
+            a.tooltip(href="https://github.com/dpmango" target="_blank")
+              i.icon-github
+              .tooltip__wrapper
+                .tooltip__inner
+                  span github
+          .sidebar__lang
+            a.tooltip.tooltip--language(href="#")
+              i.icon.icon-language
+              .tooltip__wrapper
+                .tooltip__inner
+                  span switch language
+      //CONTENT::START
+      section.content
+        .hero
+          .hero__name Sergey Khmelevskoy
+          .hero__title UI Designer <br> front-end Developer
+          .hero__subtitle
+          .hero__buttons
+            a.btn.btn--hero(href="#sectionPortfolio") Watch portfolio
+            a.btn.btn--hero(href="#sectionCalculator") Estimate project
+        // About
+        .about#sectionAbout
+          .heading.parallax__heading
+            .heading__back all about web
+            .heading__front About
+          .technologies
+            .technologies__item
+              i.ico.ico-html
+            .technologies__item
+              i.ico.ico-css
+            .technologies__item
+              i.ico.ico-javascript
+            .technologies__item
+              i.ico.ico-postcss
+            .technologies__item
+              i.ico.ico-sass
+            .technologies__item
+              i.ico.ico-jquery
+            //- .technologies__item
+            //-   i.ico.ico-npm
+            //- .technologies__item
+            //-   i.ico.ico-bower
+            //- .technologies__item
+            //-   i.ico.ico-gulp
+            .technologies__item
+              i.ico.ico-git
+            .technologies__item
+              i.ico.ico-react
+          // visuals
+          .technologies
+            .technologies__item
+              i.ico.ico-sketch
+            .technologies__item
+              i.ico.ico-ps
+            .technologies__item
+              i.ico.ico-illustator
+            .technologies__item
+              i.ico.ico-xd
+          .about__text
+            .about__text__paragraph
+              .about__text__heading Who am I ?
+              .about__text__words My name is Sergey. I do web-design and front-end developement over the past 4 years.
+            .about__text__paragraph
+              .about__text__heading What I do ?
+              .about__text__words I love to work on cool projects and help SME's to grow with an use of modern technologies and best practises.
+
+        // Portfolio
+        .portfolio#sectionPortfolio
+          .heading.heading--portfolio
+            .heading__back Stuff I do
+            .heading__front Portfolio
+          ul.portfolio__navi
+            li.portfolio__navi__link.active(data-filter="all")
+              a(href="#") All
+            li.portfolio__navi__link(data-filter="design")
+              a(href="#") Design
+            li.portfolio__navi__link(data-filter="code")
+              a(href="#") Code
+
+          .portfolio__list
+            .portfolio__item(data-category="code")
+              img(src="img/doctor.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Doctor Frank
+                .portfolio__item__short Corporate site for a chain of medical clinics in Moscow
+                a.portfolio__item__link(href="http://dpmango.github.io/doctor-frank/dist/" target="_blank")
+                  span Check live
+                  i.icon-github
+
+            .portfolio__item(data-category="code")
+              img(src="img/crm.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name CRM
+                .portfolio__item__short Nice an simple CRM base on material framework
+                a.portfolio__item__link(href="http://dpmango.github.io/crm/dist/" target="_blank")
+                  span Check live
+                  i.icon-github
+
+            .portfolio__item(data-category="all")
+              img(src="images/portfolio/polis.png").img-responsive.logo-portfolio
+              .portfolio__item__desc
+                .portfolio__item__name POLIS812
+                .portfolio__item__short Online insurance and tour operator wesite redesign
+                a.portfolio__item__link(href="https://dpmango.github.io/polis812/" target="_blank")
+                  span Check live
+                  i.icon-github
+            .portfolio__item(data-category="code")
+              img(src="img/domishka.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Domishka
+                .portfolio__item__short Psd to html
+                a.portfolio__item__link(href="http://f-end.ru/demo/0416-domishko/" target="_blank")
+                  span Check live
+                  i.icon-github
+
+            .portfolio__item(data-category="all")
+              img(src="img/kopter.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name KvadrKopters
+                .portfolio__item__short E-commerce website design and code
+                a.portfolio__item__link(href="https://www.behance.net/gallery/46760989/KvadroKopters-drone-ecommerce/" target="_blank")
+                  span Check on behance
+                  i.icon-behance2
+
+            .portfolio__item(data-category="design")
+              img(src="img/naty.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Naty
+                .portfolio__item__short E-commerce website design
+                a.portfolio__item__link(href="https://www.behance.net/gallery/46894267/Naty-E-commerce-webdesign" target="_blank")
+                  span Check on behance
+                  i.icon-behance2
+
+        // Calculator
+        .calculator#sectionCalculator
+          .heading.heading--calculator
+            .heading__back Estimate project
+            .heading__front Online cost estimatior
+          //.calculator__short If you have an intersting project, you can estimate the costs
+
+          form.calculator__form
+            .calculator__form__group.calculator__form__group--forStep1.is-active
+              .calculator__form__heading
+                .calculator__form__heading__num 1
+                span What services do you need ?
+              .ac-custom.ac-checkbox.ac-checkmark.ac--four-items(autocomplete="off")
+                ul
+                  li
+                    input#stage1(name="stage" type="checkbox")
+                    label(for="stage1") Ideas / Prototyping
+                  li
+                    input#stage2(name="stage" type="checkbox")
+                    label(for="stage2") UI Design
+                  li
+                    input#stage3(name="stage" type="checkbox")
+                    label(for="stage3") Front-end development
+
+            .calculator__form__group.calculator__form__group--forStep2
+              .calculator__form__heading
+                .calculator__form__heading__num 2
+                span What kind of project do you have ?
+              .ac-custom.ac-radio.ac-fill.ac--four-items(autocomplete="off")
+                ul
+                  li
+                    input#projectType1(name="projectType" type="radio")
+                    label(for="projectType1") Corporate
+                  li
+                    input#projectType2(name="projectType" type="radio")
+                    label(for="projectType2") Landing
+                  li
+                    input#projectType3(name="projectType" type="radio")
+                    label(for="projectType3") E-commerce
+                  li
+                    input#projectType4(name="projectType" type="radio")
+                    label(for="projectType4") Web-app
+
+            .calculator__form__group.calculator__form__group--forStep3
+              .calculator__form__heading
+                .calculator__form__heading__num 3
+                span How many pages have to be made ?
+              .calculator__form__range
+                input(type="range" id="calcPages" min="1" max="21" value="5")
+                span.rangeslider__tooltip#range-tooltip
+
+            .calculator__form__group.calculator__form__group--forStep4
+              .calculator__form__heading
+                .calculator__form__heading__num 4
+                span What kind of features you would like to have ?
+              .ac-custom.ac-checkbox.ac-checkmark.ac--four-items(autocomplete="off")
+                ul
+                  li.featureFirst
+                    input#features1(name="features" type="checkbox")
+                    label(for="features1") Responsive
+                  li.featureSecond
+                    input#features2(name="features" type="checkbox")
+                    label(for="features2") React.js based
+                  li.featureThird
+                    input#features3(name="features" type="checkbox")
+                    label(for="features3") ModX admin
+                  li.featureForth
+                    input#features4(name="features" type="checkbox")
+                    label(for="features4") Complex javascript UI
+                  li.featureFifth
+                    input#features5(name="features" type="checkbox")
+                    label(for="features5") Mobile first design
+
+            .calculator__form__price
+              hr
+              .calculator__form__price__heading This project is about
+              .calculator__form__price__result <span>0</span> h
+              .calculator__form__price__base (20$/h)
+
+        // Contact
+        .contact#sectionContact
+          <svg viewBox="0 0 3387 1270">
+            <path id="planePath" class="planePath" d="M-226 626c439,4 636,-213 934,-225 755,-31 602,769 1334,658 562,-86 668,-698 266,-908 -401,-210 -893,189 -632,630 260,441 747,121 1051,91 360,-36 889,179 889,179" />
+            <g id="plane">
+              <polygon class="fil1" points="-141,-10 199,0 -198,-72 -188,-61 -171,-57 -184,-57 " />
+              <polygon class="fil2" points="199,0 -141,-10 -163,63 -123,9 " />
+              <polygon class="fil3" points="-95,39 -113,32 -123,9 -163,63 -105,53 -108,45 -87,48 -90,45 -103,41 -94,41 " />
+              <path class="fil4" d="M-87 48l-21 -3 3 8 19 -4 -1 -1zm-26 -16l18 7 -2 -1 32 -7 -29 1 11 -4 -24 -1 -16 -18 10 23zm10 9l13 4 -4 -4 -9 0z" />
+              <polygon class="fil1" points="-83,28 -94,32 -65,31 -97,38 -86,49 -67,70 199,0 -123,9 -107,27 " />
+            </g>
+            <animateMotion xlink:href="#plane" dur="5s" repeatCount="indefinite" rotate="auto">
+              <mpath xlink:href="#planePath" />
+            </animateMotion>
+          </svg>
+
+          .heading.heading--portfolio
+            .heading__back Drop me a line
+            .heading__front Contact
+
+          .calculator__form__group
+            .calculator__form__heading What kind of project do you have ?
+            span.input.input--minoru
+              input.input__field.input__field--yoko(type="text" id="input-16")
+              label.input__label.input__label--yoko(for="input-16")
+                span.input__label-content.input__label-content--yoko Street
+
+        // Footer
+        .footer
+          .footer__copy
+            | © 2015-2016 Sergey Khmelevskoy
+          .footer__credentials
+            .footer__heading Inspired and used
+            a(href="#http://codepen.io/FabioG/pen/MaZpJp" target="_blank") plane animation by Fabio

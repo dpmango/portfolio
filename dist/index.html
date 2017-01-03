@@ -10,25 +10,48 @@
   </head>
   <body>
     <div class="flex h100">
+      <!-- Mobile hamburger-->
+      <div class="mobile-navi">
+        <div class="mobile-navi__wrap">
+          <button class="hamburger hamburger--spin" type="button"><span class="hamburger-box"></span><span class="hamburger-inner"></span></button>
+        </div>
+      </div>
       <!--SIDEBAR::START-->
       <section class="sidebar">
         <div class="sidebar__wrapper">
           <!--.sidebar__image.roundedimg(src="https://spb.hh.ru/photo/473026051.jpeg?t=1482355985&h=kuztcNaQepX-VJO52qpGvQ").img-responsive
           -->
           <div class="sidebar__name">SK</div>
-          <div class="sidebar__navigation"><a href="#">About</a><a href="#">Design</a><a href="#">Code</a><a href="#">Notes</a><a href="#">Contact</a></div>
-          <div class="sidebar__socials"><a href="#" target="_blank"><i class="icon-telegram"></i></a><a href="#" target="_blank"><i class="icon-behance2"></i></a><a href="#" target="_blank"><i class="icon-vk"></i></a><a href="#" target="_blank"><i class="icon-github"></i></a></div>
+          <div class="sidebar__navigation"><a href="#sectionAbout">About</a><a href="#sectionPortfolio">Projects</a><a href="#sectionCalculator">Prices</a><a href="#sectionContact">Contact</a></div>
+          <div class="sidebar__socials"><a class="tooltip" href="skype:khmelevskoysergey?chat" target="_blank"><i class="icon-skype"></i>
+              <div class="tooltip__wrapper">
+                <div class="tooltip__inner"><span>skype</span></div>
+              </div></a><a class="tooltip" href="http://telegram.me/khmelevskoy_s" target="_blank"><i class="icon-telegram"></i>
+              <div class="tooltip__wrapper">
+                <div class="tooltip__inner"><span>telegram</span></div>
+              </div></a><a class="tooltip" href="https://www.behance.net/mangodigital" target="_blank"><i class="icon-behance2"></i>
+              <div class="tooltip__wrapper">
+                <div class="tooltip__inner"><span>behance</span></div>
+              </div></a><a class="tooltip" href="https://github.com/dpmango" target="_blank"><i class="icon-github"></i>
+              <div class="tooltip__wrapper">
+                <div class="tooltip__inner"><span>github</span></div>
+              </div></a></div>
+          <div class="sidebar__lang"><a class="tooltip tooltip--language" href="#"><i class="icon icon-language"></i>
+              <div class="tooltip__wrapper">
+                <div class="tooltip__inner"><span>switch language</span></div>
+              </div></a></div>
         </div>
       </section>
       <!--CONTENT::START-->
       <section class="content">
         <div class="hero">
           <div class="hero__name">Sergey Khmelevskoy</div>
-          <div class="hero__title">Ineraction Designer <br> front-end Developer</div>
+          <div class="hero__title">UI Designer <br> front-end Developer</div>
           <div class="hero__subtitle"></div>
-          <div class="hero__buttons"><a class="btn btn--hero" href="#">Watch portfolio</a><a class="btn btn--hero" href="#">Estimate project</a></div>
+          <div class="hero__buttons"><a class="btn btn--hero" href="#sectionPortfolio">Watch portfolio</a><a class="btn btn--hero" href="#sectionCalculator">Estimate project</a></div>
         </div>
-        <div class="about">
+        <!-- About-->
+        <div class="about" id="sectionAbout">
           <div class="heading parallax__heading">
             <div class="heading__back">all about web</div>
             <div class="heading__front">About</div>
@@ -41,7 +64,9 @@
             <div class="technologies__item"><i class="ico ico-sass"></i></div>
             <div class="technologies__item"><i class="ico ico-jquery"></i></div>
             <div class="technologies__item"><i class="ico ico-git"></i></div>
+            <div class="technologies__item"><i class="ico ico-pug"></i></div>
             <div class="technologies__item"><i class="ico ico-react"></i></div>
+            <div class="technologies__item"><i class="ico ico-rails"></i></div>
           </div>
           <!-- visuals-->
           <div class="technologies">
@@ -61,41 +86,193 @@
             </div>
           </div>
         </div>
-        <div class="portfolio">
+        <!-- Portfolio-->
+        <div class="portfolio" id="sectionPortfolio">
           <div class="heading heading--portfolio">
-            <div class="heading__back">Stuuf I do</div>
+            <div class="heading__back">Stuff I do</div>
             <div class="heading__front">Portfolio</div>
           </div>
-          <div class="portfolio__item"><img class="img-responsive logo-portfolio" src="images/portfolio/polis.png"><a class="portfolio__item__desc" href="https://dpmango.github.io/polis812/" target="_blank">
-              <div class="portfolio__item__name">ПОЛИС812</div>
-              <div class="portfolio__item__short">Online insurance and tour operator wesite redesign</div>
-              <div class="portfolio__item__link"><span>Check live</span><i class="icon-github"></i></div></a></div>
-          <div class="portfolio__item"><img class="img-responsive" src="http://f-end.ru/assets/components/phpthumbof/cache/life-insurance-tips.6ca76c72a45fe75a8f557fa367133681.jpg"><a class="portfolio__item__desc" href="#">
-              <div class="portfolio__item__name">Project name</div>
-              <div class="portfolio__item__link">Check it out</div></a></div>
-          <div class="portfolio__item"><img class="img-responsive" src="http://f-end.ru/assets/components/phpthumbof/cache/life-insurance-tips.6ca76c72a45fe75a8f557fa367133681.jpg"><a class="portfolio__item__desc" href="#">
-              <div class="portfolio__item__name">Project name</div>
-              <div class="portfolio__item__link">Check it out</div></a></div>
-          <div class="portfolio__item"><img class="img-responsive" src="http://f-end.ru/assets/components/phpthumbof/cache/life-insurance-tips.6ca76c72a45fe75a8f557fa367133681.jpg"><a class="portfolio__item__desc" href="#">
-              <div class="portfolio__item__name">Project name</div>
-              <div class="portfolio__item__link">Check it out</div></a></div>
-          <div class="portfolio__item"><img class="img-responsive" src="http://f-end.ru/assets/components/phpthumbof/cache/life-insurance-tips.6ca76c72a45fe75a8f557fa367133681.jpg"><a class="portfolio__item__desc" href="#">
-              <div class="portfolio__item__name">Project name</div>
-              <div class="portfolio__item__link">Check it out</div></a></div>
-          <div class="portfolio__item"><img class="img-responsive" src="http://f-end.ru/assets/components/phpthumbof/cache/life-insurance-tips.6ca76c72a45fe75a8f557fa367133681.jpg"><a class="portfolio__item__desc" href="#">
-              <div class="portfolio__item__name">Project name</div>
-              <div class="portfolio__item__link">Check it out</div></a></div>
+          <ul class="portfolio__navi">
+            <li class="portfolio__navi__link active" data-filter="all"><a href="#">All</a></li>
+            <li class="portfolio__navi__link" data-filter="design"><a href="#">Design</a></li>
+            <li class="portfolio__navi__link" data-filter="code"><a href="#">Code</a></li>
+          </ul>
+          <div class="portfolio__list">
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/hamleys.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Hamleys</div>
+                <div class="portfolio__item__short">Simple landing page coding for new year promo with mVideo</div><a class="portfolio__item__link" href="http://mvideo.hamleys.ru" target="_blank"><span>Check live</span><i class="icon-link-external"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/doctor.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Doctor Frank</div>
+                <div class="portfolio__item__short">Corporate site for a chain of medical clinics in Moscow</div><a class="portfolio__item__link" href="http://dpmango.github.io/doctor-frank/dist/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/delivery.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Delivery City</div>
+                <div class="portfolio__item__short">Crossbrowser support, fixing flexbox issues, performance and layout problems</div><a class="portfolio__item__link" href="https://dpmango.github.io/delivery-city/src/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/crm.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">CRM</div>
+                <div class="portfolio__item__short">Nice an simple CRM base on material framework</div><a class="portfolio__item__link" href="http://dpmango.github.io/crm/dist/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/essay.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Roowrite</div>
+                <div class="portfolio__item__short">Extended landing type of website with order and A/B testing pages</div><a class="portfolio__item__link" href="http://f-end.ru/demo/0716-roowrite/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="all"><img class="img-responsive logo-portfolio" src="images/portfolio/polis.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">POLIS812</div>
+                <div class="portfolio__item__short">Online insurance and tour operator wesite redesign</div><a class="portfolio__item__link" href="https://dpmango.github.io/polis812/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/brightkite.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">BrightKite</div>
+                <div class="portfolio__item__short">Psd to html with an erb templates integration on Ruby on Rails</div><a class="portfolio__item__link" href="https://brightkite.com" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/domishka.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Domishka</div>
+                <div class="portfolio__item__short">Psd to html</div><a class="portfolio__item__link" href="http://f-end.ru/demo/0416-domishko/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="all"><img class="img-responsive" src="images/portfolio/kopter.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">KvadrKopters</div>
+                <div class="portfolio__item__short">E-commerce website design and code</div><a class="portfolio__item__link" href="https://www.behance.net/gallery/46760989/KvadroKopters-drone-ecommerce/" target="_blank"><span>Check on behance</span><i class="icon-behance2"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="design"><img class="img-responsive" src="images/portfolio/naty.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Naty</div>
+                <div class="portfolio__item__short">E-commerce website design</div><a class="portfolio__item__link" href="https://www.behance.net/gallery/46894267/Naty-E-commerce-webdesign" target="_blank"><span>Check on behance</span><i class="icon-behance2"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/nazarbaev.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">President library</div>
+                <div class="portfolio__item__short">National library of Kazahstan behalf of Nursultan Nazarbayev</div><a class="portfolio__item__link" href="http://f-end.ru/demo/0816-libkz/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/citysakh.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">City Sakh</div>
+                <div class="portfolio__item__short">One of the leading news portal of City Sakhalin html/css coding</div><a class="portfolio__item__link" href="https://citysakh.ru" target="_blank"><span>Check live</span><i class="icon-link-external"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--calc-->
-        <div class="calculator">
+        <!-- Calculator-->
+        <div class="calculator" id="sectionCalculator">
           <div class="heading heading--calculator">
             <div class="heading__back">Estimate project</div>
             <div class="heading__front">Online cost estimatior</div>
           </div>
-          <div class="calculator__short">If you have an intersting project, you can estimate the costs</div>
+          <!--.calculator__short If you have an intersting project, you can estimate the costs-->
+          <form class="calculator__form">
+            <div class="calculator__form__group calculator__form__group--forStep1 is-active">
+              <div class="calculator__form__heading">
+                <div class="calculator__form__heading__num">1</div><span>What services do you need ?</span>
+              </div>
+              <div class="ac-custom ac-checkbox ac-checkmark ac--four-items" autocomplete="off">
+                <ul>
+                  <li>
+                    <input id="stage1" name="stage" type="checkbox">
+                    <label for="stage1">Ideas / Prototyping</label>
+                  </li>
+                  <li>
+                    <input id="stage2" name="stage" type="checkbox">
+                    <label for="stage2">UI Design</label>
+                  </li>
+                  <li>
+                    <input id="stage3" name="stage" type="checkbox">
+                    <label for="stage3">Front-end development</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="calculator__form__group calculator__form__group--forStep2">
+              <div class="calculator__form__heading">
+                <div class="calculator__form__heading__num">2</div><span>What kind of project do you have ?</span>
+              </div>
+              <div class="ac-custom ac-radio ac-fill ac--four-items" autocomplete="off">
+                <ul>
+                  <li>
+                    <input id="projectType1" name="projectType" type="radio">
+                    <label for="projectType1">Corporate</label>
+                  </li>
+                  <li>
+                    <input id="projectType2" name="projectType" type="radio">
+                    <label for="projectType2">Landing</label>
+                  </li>
+                  <li>
+                    <input id="projectType3" name="projectType" type="radio">
+                    <label for="projectType3">E-commerce</label>
+                  </li>
+                  <li>
+                    <input id="projectType4" name="projectType" type="radio">
+                    <label for="projectType4">Web-app</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="calculator__form__group calculator__form__group--forStep3">
+              <div class="calculator__form__heading">
+                <div class="calculator__form__heading__num">3</div><span>How many pages have to be made ?</span>
+              </div>
+              <div class="calculator__form__range">
+                <input type="range" id="calcPages" min="1" max="21" value="5"><span class="rangeslider__tooltip" id="range-tooltip"></span>
+              </div>
+            </div>
+            <div class="calculator__form__group calculator__form__group--forStep4">
+              <div class="calculator__form__heading">
+                <div class="calculator__form__heading__num">4</div><span>What kind of features you would like to have ?</span>
+              </div>
+              <div class="ac-custom ac-checkbox ac-checkmark ac--four-items" autocomplete="off">
+                <ul>
+                  <li class="featureFirst">
+                    <input id="features1" name="features" type="checkbox">
+                    <label for="features1">Responsive</label>
+                  </li>
+                  <li class="featureSecond">
+                    <input id="features2" name="features" type="checkbox">
+                    <label for="features2">React.js based</label>
+                  </li>
+                  <li class="featureThird">
+                    <input id="features3" name="features" type="checkbox">
+                    <label for="features3">ModX admin</label>
+                  </li>
+                  <li class="featureForth">
+                    <input id="features4" name="features" type="checkbox">
+                    <label for="features4">Complex javascript UI</label>
+                  </li>
+                  <li class="featureFifth">
+                    <input id="features5" name="features" type="checkbox">
+                    <label for="features5">Mobile first design</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="calculator__form__price">
+              <hr>
+              <div class="calculator__form__price__heading">This project is about</div>
+              <div class="calculator__form__price__result"><span>0</span> h</div>
+              <div class="calculator__form__price__base">(20$/h)</div>
+            </div>
+          </form>
         </div>
-        <!--Contact-->
-        <div class="contact"><svg viewBox="0 0 3387 1270">
+        <!-- Contact-->
+        <div class="contact" id="sectionContact"><svg viewBox="0 0 3387 1270">
 <path id="planePath" class="planePath" d="M-226 626c439,4 636,-213 934,-225 755,-31 602,769 1334,658 562,-86 668,-698 266,-908 -401,-210 -893,189 -632,630 260,441 747,121 1051,91 360,-36 889,179 889,179" />
 <g id="plane">
 <polygon class="fil1" points="-141,-10 199,0 -198,-72 -188,-61 -171,-57 -184,-57 " />
@@ -108,13 +285,20 @@
 <mpath xlink:href="#planePath" />
 </animateMotion>
 </svg>
+          <div class="heading heading--portfolio">
+            <div class="heading__back">Drop me a line</div>
+            <div class="heading__front">Contact</div>
+          </div>
+          <div class="calculator__form__group">
+            <div class="calculator__form__heading">What kind of project do you have ?</div><span class="input input--minoru">
+              <input class="input__field input__field--yoko" type="text" id="input-16">
+              <label class="input__label input__label--yoko" for="input-16"><span class="input__label-content input__label-content--yoko">Street</span></label></span>
+          </div>
         </div>
         <!-- Footer-->
         <div class="footer">
-          <div class="footer__copy">© 2015-2016 Sergey Khmelevskoy</div>
-          <div class="footer__credentials">
-            <div class="footer__heading">Inspired and used</div><a href="#http://codepen.io/FabioG/pen/MaZpJp" target="_blank">plane animation by Fabio</a>
-          </div>
+          <div class="footer__copy">© 2014-2017 Sergey Khmelevskoy</div>
+          <div class="footer__credentials"><a href="#http://codepen.io/FabioG/pen/MaZpJp" target="_blank">© plane animation by Fabio</a></div>
         </div>
       </section>
     </div>

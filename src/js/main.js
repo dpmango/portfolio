@@ -1,5 +1,10 @@
 $(document).ready(function(){
+  // hamburger
 
+  $('.mobile-navi').on('click', function(){
+    $(this).find('.hamburger').toggleClass('is-active');
+    $(this).parent().find('.sidebar').toggleClass('is-active');
+  });
  	// Prevent # errors
 	$('[href="#"]').click(function (e) {
 		e.preventDefault();

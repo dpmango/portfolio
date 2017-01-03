@@ -15,12 +15,19 @@
     <!--endbuild-->
     <!--build:css css/style.min.css-->
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/rangeslider.css" type="text/css"><link rel="stylesheet" href="css/framework.css" type="text/css" />
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/rangeslider.css" type="text/css">
+    <link rel="stylesheet" href="css/framework.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <!--endbuild-->
   </head>
   <body>
     <div class="flex h100">
+      <!-- Mobile hamburger-->
+      <div class="mobile-navi">
+        <div class="mobile-navi__wrap">
+          <button class="hamburger hamburger--spin" type="button"><span class="hamburger-box"></span><span class="hamburger-inner"></span></button>
+        </div>
+      </div>
       <!--SIDEBAR::START-->
       <section class="sidebar">
         <div class="sidebar__wrapper">
@@ -69,7 +76,9 @@
             <div class="technologies__item"><i class="ico ico-sass"></i></div>
             <div class="technologies__item"><i class="ico ico-jquery"></i></div>
             <div class="technologies__item"><i class="ico ico-git"></i></div>
+            <div class="technologies__item"><i class="ico ico-pug"></i></div>
             <div class="technologies__item"><i class="ico ico-react"></i></div>
+            <div class="technologies__item"><i class="ico ico-rails"></i></div>
           </div>
           <!-- visuals-->
           <div class="technologies">
@@ -101,16 +110,34 @@
             <li class="portfolio__navi__link" data-filter="code"><a href="#">Code</a></li>
           </ul>
           <div class="portfolio__list">
-            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="img/doctor.png">
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/hamleys.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Hamleys</div>
+                <div class="portfolio__item__short">Simple landing page coding for new year promo with mVideo</div><a class="portfolio__item__link" href="http://mvideo.hamleys.ru" target="_blank"><span>Check live</span><i class="icon-link-external"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/doctor.png">
               <div class="portfolio__item__desc">
                 <div class="portfolio__item__name">Doctor Frank</div>
                 <div class="portfolio__item__short">Corporate site for a chain of medical clinics in Moscow</div><a class="portfolio__item__link" href="http://dpmango.github.io/doctor-frank/dist/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
               </div>
             </div>
-            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="img/crm.png">
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/delivery.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Delivery City</div>
+                <div class="portfolio__item__short">Crossbrowser support, fixing flexbox issues, performance and layout problems</div><a class="portfolio__item__link" href="https://dpmango.github.io/delivery-city/src/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/crm.png">
               <div class="portfolio__item__desc">
                 <div class="portfolio__item__name">CRM</div>
                 <div class="portfolio__item__short">Nice an simple CRM base on material framework</div><a class="portfolio__item__link" href="http://dpmango.github.io/crm/dist/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/essay.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Roowrite</div>
+                <div class="portfolio__item__short">Extended landing type of website with order and A/B testing pages</div><a class="portfolio__item__link" href="http://f-end.ru/demo/0716-roowrite/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
               </div>
             </div>
             <div class="portfolio__item" data-category="all"><img class="img-responsive logo-portfolio" src="images/portfolio/polis.png">
@@ -119,22 +146,40 @@
                 <div class="portfolio__item__short">Online insurance and tour operator wesite redesign</div><a class="portfolio__item__link" href="https://dpmango.github.io/polis812/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
               </div>
             </div>
-            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="img/domishka.png">
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/brightkite.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">BrightKite</div>
+                <div class="portfolio__item__short">Psd to html with an erb templates integration on Ruby on Rails</div><a class="portfolio__item__link" href="https://brightkite.com" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/domishka.png">
               <div class="portfolio__item__desc">
                 <div class="portfolio__item__name">Domishka</div>
                 <div class="portfolio__item__short">Psd to html</div><a class="portfolio__item__link" href="http://f-end.ru/demo/0416-domishko/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
               </div>
             </div>
-            <div class="portfolio__item" data-category="all"><img class="img-responsive" src="img/kopter.png">
+            <div class="portfolio__item" data-category="all"><img class="img-responsive" src="images/portfolio/kopter.png">
               <div class="portfolio__item__desc">
                 <div class="portfolio__item__name">KvadrKopters</div>
                 <div class="portfolio__item__short">E-commerce website design and code</div><a class="portfolio__item__link" href="https://www.behance.net/gallery/46760989/KvadroKopters-drone-ecommerce/" target="_blank"><span>Check on behance</span><i class="icon-behance2"></i></a>
               </div>
             </div>
-            <div class="portfolio__item" data-category="design"><img class="img-responsive" src="img/naty.png">
+            <div class="portfolio__item" data-category="design"><img class="img-responsive" src="images/portfolio/naty.png">
               <div class="portfolio__item__desc">
                 <div class="portfolio__item__name">Naty</div>
                 <div class="portfolio__item__short">E-commerce website design</div><a class="portfolio__item__link" href="https://www.behance.net/gallery/46894267/Naty-E-commerce-webdesign" target="_blank"><span>Check on behance</span><i class="icon-behance2"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/nazarbaev.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">President library</div>
+                <div class="portfolio__item__short">National library of Kazahstan behalf of Nursultan Nazarbayev</div><a class="portfolio__item__link" href="http://f-end.ru/demo/0816-libkz/" target="_blank"><span>Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/citysakh.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">City Sakh</div>
+                <div class="portfolio__item__short">One of the leading news portal of City Sakhalin html/css coding</div><a class="portfolio__item__link" href="https://citysakh.ru" target="_blank"><span>Check live</span><i class="icon-link-external"></i></a>
               </div>
             </div>
           </div>
@@ -264,10 +309,8 @@
         </div>
         <!-- Footer-->
         <div class="footer">
-          <div class="footer__copy">© 2015-2016 Sergey Khmelevskoy</div>
-          <div class="footer__credentials">
-            <div class="footer__heading">Inspired and used</div><a href="#http://codepen.io/FabioG/pen/MaZpJp" target="_blank">plane animation by Fabio</a>
-          </div>
+          <div class="footer__copy">© 2014-2017 Sergey Khmelevskoy</div>
+          <div class="footer__credentials"><a href="#http://codepen.io/FabioG/pen/MaZpJp" target="_blank">© plane animation by Fabio</a></div>
         </div>
       </section>
     </div>

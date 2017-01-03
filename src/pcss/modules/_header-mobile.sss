@@ -1,12 +1,33 @@
 
 // Header mobile
-.header-mobile__wrapper
+
+.mobile-navi
+  position: fixed
+  right: 1em
+  top: 1em
+  z-index: 9
+  @media($tablet-from)
+    display: none
+
+  &__wrap
+    border: 2px solid white
+    width: 3.5em
+    height: 3.5em
+    position: relative
+    transform: rotate(45deg)
+    cursor: pointer
+    transition: background .3s ease
+    box-shadow: 0 0 4px rgba(0,0,0,.4)
+    &:hover
+      background: color(white a(20%))
+      .hamburger
+        opacity: 0.9
 
 .hamburger
-  padding: 15px 0px 5px 0px
+  padding: 8px 15px 8px 5px
   display: inline-block
   cursor: pointer
-  transition-property: all
+  transition-property: opacity, filter
   transition-duration: 0.15s
   transition-timing-function: linear
   font: inherit
@@ -16,77 +37,62 @@
   border: 0
   margin: 0
   overflow: visible
+  transform: rotate(-45deg)
 
 .hamburger-box
-  width: 45px
-  height: 0px
+  width: 40px
+  height: 24px
   display: inline-block
   position: relative
 
 .hamburger-inner
   display: block
   top: 50%
-  margin-top: -7px
-  width: 45px
+  margin-top: -2px
+  width: 40px
   height: 4px
   background-color: white
   border-radius: 4px
   position: absolute
-  transition: all 0.15s ease
-  &:before, &:after
-    width: 45px
+  transition-property: transform
+  transition-duration: 0.15s
+  transition-timing-function: ease
+  box-shadow: 0 0 4px rgba(0,0,0,.4)
+  &::before, &::after
+    width: 40px
     height: 4px
     background-color: white
+    border-radius: 4px
     position: absolute
-    transition: all 0.15s ease
-  &:before, &:after
+    transition-property: transform
+    transition-duration: 0.15s
+    transition-timing-function: ease
+    box-shadow: 0 0 4px rgba(0,0,0,.4)
+  &::before, &::after
     content: ""
     display: block
-  &:before
+  &::before
     top: -10px
-  &:after
-    top: -20px
+  &::after
+    bottom: -10px
 
-
-.mobile-nav
-  display: none
-  color: white
-  font-size: 1.1rem
-  background: $colorPrimary
-  .mobile-nav-list
-    list-style: none
-    margin: 0
-    padding: 20px 0
-    li
-      margin: 0
-      display: block
-      transition: all .4s ease
-      .ico
-        margin-right: .5em
-      a
-        display: block
-        border-bottom: 1px solid color(white a(10%))
-        padding: 0.6em 3.5em 0.7em 0.7em
-        border-left: 3px solid transparent
-        transition: all .4s ease
-        &:hover
-          background: color(white a(10%))
-        &:active, &:focus
-          text-decoration: none
-          color: white
-      &.active a
-        border-left-color: $colorRed
-      &:hover:not(.active)
-        background: color(white a(10%))
-        a
-          border-color: color($fontColor a(50%))
-
-    .mobile-nav-sublvl
-      display: none
-      font-size: 16px
-      padding-left: 20px
-      list-style: circle
-      &.active
-        display: block
-      a
-        border-bottom: none
+.hamburger--spin
+  .hamburger-inner
+    transition-duration: 0.3s
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::before
+      transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in
+    &::after
+      transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transform: rotate(225deg)
+    transition-delay: 0.14s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    &::before
+      top: 0
+      opacity: 0
+      transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out
+    &::after
+      bottom: 0
+      transform: rotate(-90deg)
+      transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)

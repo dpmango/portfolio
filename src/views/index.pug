@@ -5,6 +5,13 @@ html
   body
 
     .flex.h100
+      // Mobile hamburger
+      .mobile-navi
+        .mobile-navi__wrap
+          button.hamburger.hamburger--spin(type="button")
+            span.hamburger-box
+            span.hamburger-inner
+
       //SIDEBAR::START
       section.sidebar
         .sidebar__wrapper
@@ -79,7 +86,11 @@ html
             .technologies__item
               i.ico.ico-git
             .technologies__item
+              i.ico.ico-pug
+            .technologies__item
               i.ico.ico-react
+            .technologies__item
+              i.ico.ico-rails
           // visuals
           .technologies
             .technologies__item
@@ -110,10 +121,19 @@ html
               a(href="#") Design
             li.portfolio__navi__link(data-filter="code")
               a(href="#") Code
-
           .portfolio__list
+
             .portfolio__item(data-category="code")
-              img(src="img/doctor.png").img-responsive
+              img(src="images/portfolio/hamleys.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Hamleys
+                .portfolio__item__short Simple landing page coding for new year promo with mVideo
+                a.portfolio__item__link(href="http://mvideo.hamleys.ru" target="_blank")
+                  span Check live
+                  i.icon-link-external
+
+            .portfolio__item(data-category="code")
+              img(src="images/portfolio/doctor.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Doctor Frank
                 .portfolio__item__short Corporate site for a chain of medical clinics in Moscow
@@ -122,11 +142,29 @@ html
                   i.icon-github
 
             .portfolio__item(data-category="code")
-              img(src="img/crm.png").img-responsive
+              img(src="images/portfolio/delivery.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Delivery City
+                .portfolio__item__short Crossbrowser support, fixing flexbox issues, performance and layout problems
+                a.portfolio__item__link(href="https://dpmango.github.io/delivery-city/src/" target="_blank")
+                  span Check live
+                  i.icon-github
+
+            .portfolio__item(data-category="code")
+              img(src="images/portfolio/crm.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name CRM
                 .portfolio__item__short Nice an simple CRM base on material framework
                 a.portfolio__item__link(href="http://dpmango.github.io/crm/dist/" target="_blank")
+                  span Check live
+                  i.icon-github
+
+            .portfolio__item(data-category="code")
+              img(src="images/portfolio/essay.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Roowrite
+                .portfolio__item__short Extended landing type of website with order and A/B testing pages
+                a.portfolio__item__link(href="http://f-end.ru/demo/0716-roowrite/" target="_blank")
                   span Check live
                   i.icon-github
 
@@ -138,8 +176,18 @@ html
                 a.portfolio__item__link(href="https://dpmango.github.io/polis812/" target="_blank")
                   span Check live
                   i.icon-github
+
             .portfolio__item(data-category="code")
-              img(src="img/domishka.png").img-responsive
+              img(src="images/portfolio/brightkite.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name BrightKite
+                .portfolio__item__short Psd to html with an erb templates integration on Ruby on Rails
+                a.portfolio__item__link(href="https://brightkite.com" target="_blank")
+                  span Check live
+                  i.icon-github
+
+            .portfolio__item(data-category="code")
+              img(src="images/portfolio/domishka.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Domishka
                 .portfolio__item__short Psd to html
@@ -148,7 +196,7 @@ html
                   i.icon-github
 
             .portfolio__item(data-category="all")
-              img(src="img/kopter.png").img-responsive
+              img(src="images/portfolio/kopter.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name KvadrKopters
                 .portfolio__item__short E-commerce website design and code
@@ -157,13 +205,31 @@ html
                   i.icon-behance2
 
             .portfolio__item(data-category="design")
-              img(src="img/naty.png").img-responsive
+              img(src="images/portfolio/naty.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Naty
                 .portfolio__item__short E-commerce website design
                 a.portfolio__item__link(href="https://www.behance.net/gallery/46894267/Naty-E-commerce-webdesign" target="_blank")
                   span Check on behance
                   i.icon-behance2
+
+            .portfolio__item(data-category="code")
+              img(src="images/portfolio/nazarbaev.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name President library
+                .portfolio__item__short National library of Kazahstan behalf of Nursultan Nazarbayev
+                a.portfolio__item__link(href="http://f-end.ru/demo/0816-libkz/" target="_blank")
+                  span Check live
+                  i.icon-github
+
+            .portfolio__item(data-category="code")
+              img(src="images/portfolio/citysakh.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name City Sakh
+                .portfolio__item__short One of the leading news portal of City Sakhalin html/css coding
+                a.portfolio__item__link(href="https://citysakh.ru" target="_blank")
+                  span Check live
+                  i.icon-link-external
 
         // Calculator
         .calculator#sectionCalculator
@@ -274,7 +340,7 @@ html
         // Footer
         .footer
           .footer__copy
-            | © 2015-2016 Sergey Khmelevskoy
+            | © 2014-2017 Sergey Khmelevskoy
           .footer__credentials
-            .footer__heading Inspired and used
-            a(href="#http://codepen.io/FabioG/pen/MaZpJp" target="_blank") plane animation by Fabio
+            //- .footer__heading Inspired and used
+            a(href="#http://codepen.io/FabioG/pen/MaZpJp" target="_blank") © plane animation by Fabio

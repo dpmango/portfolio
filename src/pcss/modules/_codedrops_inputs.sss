@@ -217,7 +217,7 @@
 .input__field--kuro
   width: 100%
   background: transparent
-  color: #9196A1
+  color: white
   opacity: 0
   text-align: center
   -webkit-transition: opacity 0.3s
@@ -227,8 +227,15 @@
   position: absolute
   left: 0
   width: 100%
-  color: #df6589
+  color: white
   pointer-events: none
+  &.valid
+    &::before, &::after
+      border-color: $colorGreen
+  &.not-valid
+    &::before, &::after
+      border-color: $colorRed
+      
   &::before, &::after
     content: ''
     position: absolute
@@ -236,7 +243,7 @@
     left: 0
     width: 50%
     height: 100%
-    border: 4px solid #747981
+    border: 4px solid white
     -webkit-transition: -webkit-transform 0.3s
     transition: transform 0.3s
   &::before

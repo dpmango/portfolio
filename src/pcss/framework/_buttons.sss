@@ -7,11 +7,25 @@
   margin: 1em 1em 1em 0em
   text-transform: uppercase
   font-family: 'LatoWebBold'
+  outline: none
+  box-shadow: none
+  border: none
+  cursor: pointer
   transition: box-shadow .4s ease-in-out
   &--hero
     background: white
     &:hover
       box-shadow: 0 0 3em rgba(255, 255, 255, .3)
+  &--contact
+    display: inline-block
+    background: $colorOrange
+    color: white
+    padding: .6em 1.5em
+    transform: perspective(1px) translateZ(0)
+    transition: transform .3s ease-in-out, border-radius .5s ease-in-out
+    &:hover
+      border-radius: 0
+      transform: skew(-10deg)
 
   @media($tablet)
     font-size: 1rem

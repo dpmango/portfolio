@@ -522,8 +522,81 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle
   min-height: 100vh
   position: relative
   background: white
+  background: linear-gradient(-45deg, #0a1855 0, #da0024 100%)
   svg
     width: 100%
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+
+  &__form
+    text-align: center
+    flex: 1 1 65%
+    &__field
+      margin-bottom: 1em
+      transition: transform .4s ease-in
+      &--first
+        transform: translate3d(-100%, 0, 0)
+        height: 0
+        &.active
+          transform: translate3d(0, 0, 0)
+          height: auto
+      &--second
+        transform: translate3d(-100%, 0, 0)
+        height: 0
+        &.active
+          transform: translate3d(0, 0, 0)
+          height: auto
+    &__textarea-validation
+      color: white
+      padding-top: .5em
+      display: none
+
+    textarea
+      display: inline-block
+      max-width: 400px
+      width: calc(100% - 2em)
+      padding: 1em
+      border: 4px solid white
+      // border: transparent
+      // background: color(white a(50%))
+      background: transparent
+      outline: none
+      // border-radius: .4em
+      font-size: 1rem
+      line-height: 1.4em
+      transition: background .4s ease
+      color: white
+      // box-shadow: 2px 2px 8px rgba(0,0,0,.3)
+      &::placeholder
+        color: white
+      &:focus
+        color: $fontColor
+        background: color(white a(85%))
+        &::placeholder
+          color: $fontColor
+    &__back
+      display: none
+      color: white
+      margin-right: 1em
+      border-bottom: 1px dashed white
+      &.active
+        display: inline-block
+
+  &__direct
+    flex: 1 1 35%
+    &__item
+      display: block
+      color: white
+      padding-bottom: 1em
+      .icon
+        font-size: 1.6rem
+        vertical-align: middle
+      .icon-skype
+        font-size: 1.8rem
+      span
+        margin-left: .7em
+
 
 .planePath
   stroke: #D9DADA
@@ -547,7 +620,7 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle
   display: flex
   justify-content: space-between
   background: $colorDark
-  padding: 5vh 5vw
+  padding: 3vh 5vw
   color: color(white a(70%))
   &__copy
   &__credentials

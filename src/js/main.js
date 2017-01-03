@@ -1,10 +1,10 @@
 $(document).ready(function(){
   // hamburger
-
   $('.mobile-navi').on('click', function(){
     $(this).find('.hamburger').toggleClass('is-active');
     $(this).parent().find('.sidebar').toggleClass('is-active');
   });
+
  	// Prevent # errors
 	$('[href="#"]').click(function (e) {
 		e.preventDefault();
@@ -267,5 +267,128 @@ $(document).ready(function(){
   });
   // End calculator logic
 
+  // Contact form
+  $('.btn--contact').on('click', function(e){
+    if ($(this).is('.validateTextarea')){
+      e.preventDefault();
+      var textAreaVal = $(this).closest('.contact__form').find('textarea').val();
+      if(textAreaVal != '' && textAreaVal.length >= 10 ) {
+        $('.contact__form__textarea-validation').fadeOut();
+        $('.contact__form__field--first').removeClass('active');
+        $('.contact__form__field--second').addClass('active');
+        $(this).removeClass('validateTextarea').addClass('readyToSend').text('Send');
+        $('.contact__form__back').addClass('active');
+      } else {
+        $('.contact__form__textarea-validation').fadeIn();
+      }
+    } else {
+      var formData = {
+          'message'           : $('textarea[name=message]').val(),
+          'email'             : $('input[name=email]').val()
+      };
+
+      $.ajax({
+        type        : 'POST',
+        url         : 'contact.php',
+        data        : formData,
+        dataType    : 'json',
+        encode      : true
+      }).done(function(data) {
+
+          if ( ! data.success) {
+
+              if (data.errors.message) {
+                $('.contact__form').append('<div class="help-block">' + data.errors.name + '</div>'); // add the actual error message under our input
+              }
+              if (data.errors.email) {
+                $('.contact__form').append('<div class="help-block">' + data.errors.email + '</div>'); // add the actual error message under our input
+              }
+
+          } else {
+            $('.contact__form').append('<div class="alert alert-success">' + data.message + '</div>');
+          }
+        }).fail(function(data) {
+          console.log(data);
+        });
+
+      e.preventDefault();
+    }
+  });
+
+  $('.contact__form__back').on('click', function(){
+    $('.contact__form__field--first').addClass('active');
+    $('.contact__form__field--second').removeClass('active');
+    $('.btn--contact').removeClass('readyToSend').addClass('validateTextarea').text('Next');;
+    $('.contact__form__back').removeClass('active');
+  });
+
+
+  $('input[type=email]').blur(function() {
+      if($(this).val() != '') {
+          var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          if(pattern.test($(this).val())){
+              $('.input__label--kuro').removeClass('not-valid').addClass('valid');
+              // $('#valid').text('Верно');
+          } else {
+              $('.input__label--kuro').removeClass('valid').addClass('not-valid');
+              // $('#valid').text('Не верно');
+          }
+      } else {
+          $('.input__label--kuro').removeClass('valid').addClass('not-valid');
+          // $('#valid').text('Поле email не должно быть пустым');
+      }
+  });
+
+  // Text input
+  (function() {
+    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+    if (!String.prototype.trim) {
+      (function() {
+        // Make sure we trim BOM and NBSP
+        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+        String.prototype.trim = function() {
+          return this.replace(rtrim, '');
+        };
+      })();
+    }
+
+    [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+      // in case the input is already filled..
+      if( inputEl.value.trim() !== '' ) {
+        classie.add( inputEl.parentNode, 'input--filled' );
+      }
+
+      // events:
+      inputEl.addEventListener( 'focus', onInputFocus );
+      inputEl.addEventListener( 'blur', onInputBlur );
+    } );
+
+    function onInputFocus( ev ) {
+      classie.add( ev.target.parentNode, 'input--filled' );
+    }
+
+    function onInputBlur( ev ) {
+      if( ev.target.value.trim() === '' ) {
+        classie.remove( ev.target.parentNode, 'input--filled' );
+      }
+    }
+  })();
 
 });
+
+
+
+// textarea autoExpand
+$(document)
+  .one('focus.autoExpand', 'textarea.autoExpand', function(){
+      var savedValue = this.value;
+      this.value = '';
+      this.baseScrollHeight = this.scrollHeight;
+      this.value = savedValue;
+  })
+  .on('input.autoExpand', 'textarea.autoExpand', function(){
+      var minRows = this.getAttribute('data-min-rows')|0, rows;
+      this.rows = minRows;
+      rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
+      this.rows = minRows + rows;
+  });

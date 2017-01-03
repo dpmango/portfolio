@@ -1,45 +1,143 @@
+/* variables */
+
+
 /* layout */
+
+
 /* Flexbox */
+
+
 .flex {
+
+
     display: -webkit-box;
+
+
     display: -webkit-flex;
+
+
     display: -ms-flexbox;
+
+
     display: flex
 }
 /* Buttons */
 .btn {
+
+
     margin: 1em 1em 1em 0em;
+
+
     padding: .8em 1.5em;
+
+
+    outline: none;
+
+
+    border: none;
+
+
     border-radius: .4em;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+
+
     text-transform: uppercase;
+
+
     font-size: 19.2px;
+
+
     font-size: 1.2rem;
+
+
     font-family: 'LatoWebBold';
+
+
+    cursor: pointer;
+
+
     -webkit-transition: -webkit-box-shadow .4s ease-in-out;
+
+
     transition: -webkit-box-shadow .4s ease-in-out;
+
+
     transition: box-shadow .4s ease-in-out;
+
+
     transition: box-shadow .4s ease-in-out, -webkit-box-shadow .4s ease-in-out
 }
 .btn--hero {
+
+
     background: white
 }
 .btn--hero:hover {
     -webkit-box-shadow: 0 0 3em rgba(255, 255, 255, .3);
             box-shadow: 0 0 3em rgba(255, 255, 255, .3)
 }
+.btn--contact {
+
+
+    display: inline-block;
+
+
+    padding: .6em 1.5em;
+
+
+    background: #f46d36;
+
+
+    color: white;
+
+
+    -webkit-transition: border-radius .5s ease-in-out, -webkit-transform .3s ease-in-out;
+
+
+    transition: border-radius .5s ease-in-out, -webkit-transform .3s ease-in-out;
+
+
+    transition: transform .3s ease-in-out, border-radius .5s ease-in-out;
+
+
+    transition: transform .3s ease-in-out, border-radius .5s ease-in-out, -webkit-transform .3s ease-in-out;
+    -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0)
+}
+.btn--contact:hover {
+
+
+    border-radius: 0;
+    -webkit-transform: skew(-10deg);
+        -ms-transform: skew(-10deg);
+            transform: skew(-10deg)
+}
 @media(max-width: 768px) {
+
+
     .btn {
+
+
         font-size: 1rem
     }
 }
 .h100 {
+
+
     min-height: 100vh
 }
 .rounded {
+
+
     border-radius: 50%
 }
 /* Images */
 .img-responsive {
+
+
     display: block;
+
+
     max-width: 100%
 }

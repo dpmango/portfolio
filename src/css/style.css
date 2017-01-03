@@ -829,9 +829,135 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     position: relative;
     min-height: 100vh;
     background: white;
+    background: -webkit-linear-gradient(135deg, #0a1855 0, #da0024 100%);
+    background: linear-gradient(-45deg, #0a1855 0, #da0024 100%);
 }
 .contact svg {
     width: 100%;
+}
+.contact__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.contact__form {
+    -webkit-flex: 1 1 65%;
+        -ms-flex: 1 1 65%;
+            flex: 1 1 65%;
+    text-align: center;
+    -webkit-box-flex: 1;
+}
+.contact__form textarea {
+    display: inline-block;
+    padding: 1em;
+    max-width: 400px;
+    width: -webkit-calc(100% - 2em);
+    width: calc(100% - 2em);
+    outline: none;
+    border: 4px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.4em;
+    -webkit-transition: background .4s ease;
+    transition: background .4s ease;/* border: transparent *//* background: color(white a(50%)) *//* border-radius: .4em *//* box-shadow: 2px 2px 8px rgba(0,0,0,.3) */
+}
+.contact__form textarea::-webkit-input-placeholder {
+    color: white;
+}
+.contact__form textarea::-moz-placeholder {
+    color: white;
+}
+.contact__form textarea:-ms-input-placeholder {
+    color: white;
+}
+.contact__form textarea::placeholder {
+    color: white;
+}
+.contact__form textarea:focus {
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+}
+.contact__form textarea:focus::-webkit-input-placeholder {
+    color: #333;
+}
+.contact__form textarea:focus::-moz-placeholder {
+    color: #333;
+}
+.contact__form textarea:focus:-ms-input-placeholder {
+    color: #333;
+}
+.contact__form textarea:focus::placeholder {
+    color: #333;
+}
+.contact__form__field {
+    margin-bottom: 1em;
+    -webkit-transition: -webkit-transform .4s ease-in;
+    transition: -webkit-transform .4s ease-in;
+    transition: transform .4s ease-in;
+    transition: transform .4s ease-in, -webkit-transform .4s ease-in;
+}
+.contact__form__field--first {
+    height: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+}
+.contact__form__field--first.active {
+    height: auto;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+.contact__form__field--second {
+    height: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+}
+.contact__form__field--second.active {
+    height: auto;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+.contact__form__textarea-validation {
+    display: none;
+    padding-top: .5em;
+    color: white;
+}
+.contact__form__back {
+    display: none;
+    margin-right: 1em;
+    border-bottom: 1px dashed white;
+    color: white;
+}
+.contact__form__back.active {
+    display: inline-block;
+}
+.contact__direct {
+    -webkit-flex: 1 1 35%;
+        -ms-flex: 1 1 35%;
+            flex: 1 1 35%;
+    -webkit-box-flex: 1;
+}
+.contact__direct__item {
+    display: block;
+    padding-bottom: 1em;
+    color: white;
+}
+.contact__direct__item .icon {
+    vertical-align: middle;
+    font-size: 25.6px;
+    font-size: 1.6rem;
+}
+.contact__direct__item .icon-skype {
+    font-size: 28.8px;
+    font-size: 1.8rem;
+}
+.contact__direct__item span {
+    margin-left: .7em;
 }
 .planePath {
     fill: none;
@@ -861,7 +987,7 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     display: flex;
     -webkit-justify-content: space-between;
             justify-content: space-between;
-    padding: 5vh 5vw;
+    padding: 3vh 5vw;
     background: #232c35;
     color: rgba(255, 255, 255, 0.7);
     -webkit-box-pack: justify;
@@ -1044,6 +1170,16 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
 }
 .heading.parallax__heading {
     padding-top: 0;
+}
+.heading--contact {
+    margin-top: -30vh;
+    padding: 0vh 0 20vh 0;
+}
+.heading--contact .heading__back {
+    color: rgba(255, 255, 255, 0.15);
+}
+.heading--contact .heading__front {
+    color: white;
 }
 .heading--portfolio {
     padding: 5vh 0 0vh 0;
@@ -1280,12 +1416,16 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
 }
 [class^="icon-"], [class*=" icon-"] {
     text-transform: none;
+    letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
     font-variant: normal;
     font-family: 'icomoon' !important;
     line-height: 1;
     speak: none;
+    -ms-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga";
+    font-variant-ligatures: discretionary-ligatures;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -1312,6 +1452,12 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
 }
 .icon-link-external:before {
     content: "\e902";
+}
+.icon-mail4:before {
+    content: "\ea86";
+}
+.icon-phone-square:before {
+    content: "\e903";
 }
 /* buttons */
 .btn {}
@@ -1564,7 +1710,7 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
 .input__field--kuro {
     width: 100%;
     background: transparent;
-    color: #9196A1;
+    color: white;
     text-align: center;
     opacity: 0;
     -webkit-transition: opacity 0.3s;
@@ -1574,8 +1720,16 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     position: absolute;
     left: 0;
     width: 100%;
-    color: #df6589;
+    color: white;
     pointer-events: none;
+}
+.input__label--kuro.valid {}
+.input__label--kuro.valid::before, .input__label--kuro.valid::after {
+    border-color: #4ab68f;
+}
+.input__label--kuro.not-valid {}
+.input__label--kuro.not-valid::before, .input__label--kuro.not-valid::after {
+    border-color: #f45b63;
 }
 .input__label--kuro::before, .input__label--kuro::after {
     position: absolute;
@@ -1583,7 +1737,7 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     left: 0;
     width: 50%;
     height: 100%;
-    border: 4px solid #747981;
+    border: 4px solid white;
     content: '';
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;

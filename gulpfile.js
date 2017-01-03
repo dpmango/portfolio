@@ -131,7 +131,7 @@ gulp.task('fonts', function() {
 })
 
 gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+  return del.sync(['dist/**/*', '!dist/contact.php', '!dist/images', '!dist/images/**/*']);
 })
 
 gulp.task('cache:clear', function (callback) {

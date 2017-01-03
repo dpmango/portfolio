@@ -326,16 +326,42 @@ html
             </animateMotion>
           </svg>
 
-          .heading.heading--portfolio
+          .heading.heading--contact
             .heading__back Drop me a line
-            .heading__front Contact
+            //- .heading__front Contact
 
-          .calculator__form__group
-            .calculator__form__heading What kind of project do you have ?
-            span.input.input--minoru
-              input.input__field.input__field--yoko(type="text" id="input-16")
-              label.input__label.input__label--yoko(for="input-16")
-                span.input__label-content.input__label-content--yoko Street
+          .contact__wrapper
+
+            form.contact__form(action="contact.php" method="POST")
+              .contact__form__field.contact__form__field--first.active
+                textarea.autoExpand(rows='4' data-min-rows='4' name="message" placeholder="Write about any projects or thoughts here...")
+                .contact__form__textarea-validation Hey! Looks like you forgot to type something
+
+              .contact__form__field.contact__form__field--second
+                span.input.input--kuro
+                  input.input__field.input__field--kuro(type="email" name="email" id="input-16")
+                  label.input__label.input__label--kuro(for="input-16")
+                    span.input__label-content.input__label-content--kuro Your email
+
+              .contact__form__field
+                a.contact__form__back(href="#") back
+                button.btn.btn--contact.validateTextarea(type="submit") NEXT
+
+            .contact__direct
+              a.contact__direct__item(href="skype:khmelevskoysergey?chat" target="_blank")
+                i.icon.icon-skype
+                span khmelevskoysergey
+              a.contact__direct__item(href="http://telegram.me/khmelevskoy_s" target="_blank")
+                i.icon.icon-telegram
+                span khmelevskoy_s
+              a.contact__direct__item(href="mailto:sergey@f-end.ru" target="_blank")
+                i.icon.icon-mail4
+                span sergey@f-end.ru
+              a.contact__direct__item(href="tel:+358466461777" target="_blank")
+                i.icon.icon-phone-square
+                span +358 (46) 6461777
+
+
 
         // Footer
         .footer
@@ -343,4 +369,4 @@ html
             | © 2014-2017 Sergey Khmelevskoy
           .footer__credentials
             //- .footer__heading Inspired and used
-            a(href="#http://codepen.io/FabioG/pen/MaZpJp" target="_blank") © plane animation by Fabio
+            a(href="http://codepen.io/FabioG/pen/MaZpJp" target="_blank") © plane animation by Fabio

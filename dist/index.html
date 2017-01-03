@@ -285,20 +285,29 @@
 <mpath xlink:href="#planePath" />
 </animateMotion>
 </svg>
-          <div class="heading heading--portfolio">
+          <div class="heading heading--contact">
             <div class="heading__back">Drop me a line</div>
-            <div class="heading__front">Contact</div>
           </div>
-          <div class="calculator__form__group">
-            <div class="calculator__form__heading">What kind of project do you have ?</div><span class="input input--minoru">
-              <input class="input__field input__field--yoko" type="text" id="input-16">
-              <label class="input__label input__label--yoko" for="input-16"><span class="input__label-content input__label-content--yoko">Street</span></label></span>
+          <div class="contact__wrapper">
+            <form class="contact__form" action="contact.php" method="POST">
+              <div class="contact__form__field contact__form__field--first active">
+                <textarea class="autoExpand" rows="4" data-min-rows="4" name="message" placeholder="Write about any projects or thoughts here..."></textarea>
+                <div class="contact__form__textarea-validation">Hey! Looks like you forgot to type something</div>
+              </div>
+              <div class="contact__form__field contact__form__field--second"><span class="input input--kuro">
+                  <input class="input__field input__field--kuro" type="email" name="email" id="input-16">
+                  <label class="input__label input__label--kuro" for="input-16"><span class="input__label-content input__label-content--kuro">Your email</span></label></span></div>
+              <div class="contact__form__field"><a class="contact__form__back" href="#">back</a>
+                <button class="btn btn--contact validateTextarea" type="submit">NEXT</button>
+              </div>
+            </form>
+            <div class="contact__direct"><a class="contact__direct__item" href="skype:khmelevskoysergey?chat" target="_blank"><i class="icon icon-skype"></i><span>khmelevskoysergey</span></a><a class="contact__direct__item" href="http://telegram.me/khmelevskoy_s" target="_blank"><i class="icon icon-telegram"></i><span>khmelevskoy_s</span></a><a class="contact__direct__item" href="mailto:sergey@f-end.ru" target="_blank"><i class="icon icon-mail4"></i><span>sergey@f-end.ru</span></a><a class="contact__direct__item" href="tel:+358466461777" target="_blank"><i class="icon icon-phone-square"></i><span>+358 (46) 6461777</span></a></div>
           </div>
         </div>
         <!-- Footer-->
         <div class="footer">
           <div class="footer__copy">© 2014-2017 Sergey Khmelevskoy</div>
-          <div class="footer__credentials"><a href="#http://codepen.io/FabioG/pen/MaZpJp" target="_blank">© plane animation by Fabio</a></div>
+          <div class="footer__credentials"><a href="http://codepen.io/FabioG/pen/MaZpJp" target="_blank">© plane animation by Fabio</a></div>
         </div>
       </section>
     </div>

@@ -88,18 +88,26 @@ body, html
   flex: 0 0 130px
   position: relative
   background: #f8f8f8
+  z-index: 10
   @media($tablet)
     flex-basis: 0
     transform: translate3d(-100%, 0, 0)
     &.is-active
       flex-basis: 130px
       transform: translate3d(0, 0, 0)
+      .sidebar__wrapper
+        width: 130px
+        transform: translate3d(0, 0, 0)
 
   &__wrapper
     position: fixed
     width: 130px
     overflow-x: hidden
     overflow-y: scroll
+    @media($tablet)
+      width: 0
+      transform: translate3d(-100%, 0, 0)
+
   &__image
     size: 3.5em
     margin: 3em 2em 1em 1.5em
@@ -190,6 +198,8 @@ body, html
     color: white
     text-shadow: 0px 6px 1px color(black a(35%))
     @media($tablet)
+      font-size: 3rem
+    span
       font-size: 3rem
   &__buttons
     position: relative
@@ -294,7 +304,7 @@ body, html
     background: white
     transform: skew(45deg) scale(0)
     transition: transform 0.4s ease-in-out
-    @media($wide-from)
+    @media(width >= 1300px)
       flex-basis: 25%
     @media($hd-from)
       flex-basis: 20%
@@ -528,10 +538,18 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle
   &__wrapper
     display: flex
     flex-wrap: wrap
+    transform: translate3d(-90%, 0vh, 0)
+    transition: transform .7s ease-in-out
+    &.is-showing
+      transform: translate3d(0, 0, 0)
 
   &__form
     text-align: center
     flex: 1 1 65%
+    &__success
+      color: white
+      font-size: 2rem
+      padding: 1em 2em
     &__field
       margin-bottom: 1em
       transition: transform .4s ease-in

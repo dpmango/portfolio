@@ -46,7 +46,7 @@ $data           = array();      // array to pass back data
 
       // show a message of success and provide a true success variable
       $data['success'] = true;
-      $data['message'] = 'Success!';
+      $data['message'] = 'Thank you! I will be in touch with you as soon as possible. Have an nice day!';
     }
 
     // return all our data to an AJAX call

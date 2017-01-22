@@ -852,6 +852,7 @@ body, html {
 /* Layout */
 .sidebar {
     position: relative;
+    z-index: 10;
     -webkit-flex: 0 0 130px;
         -ms-flex: 0 0 130px;
             flex: 0 0 130px;
@@ -873,12 +874,24 @@ body, html {
                 transform: translate3d(0, 0, 0);
             -ms-flex-preferred-size: 130px;
     }
+    .sidebar.is-active .sidebar__wrapper {
+        width: 130px;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
 }
 .sidebar__wrapper {
     position: fixed;
     overflow-x: hidden;
     overflow-y: scroll;
     width: 130px;
+}
+@media(max-width: 768px) {
+    .sidebar__wrapper {
+        width: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+    }
 }
 .sidebar__image {
     overflow: hidden;
@@ -1014,6 +1027,10 @@ body, html {
     font-size: 4rem;
     font-family: 'LatoWebBold';
     line-height: 1.25em;
+}
+.hero__title span {
+    font-size: 48px;
+    font-size: 3rem;
 }
 @media(max-width: 768px) {
     .hero__title {
@@ -1234,7 +1251,7 @@ body, html {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
 }
-@media(min-width: 1200px) {
+@media(min-width: 1300px) {
     .portfolio__item {
         -webkit-flex-basis: 25%;
                 flex-basis: 25%;
@@ -1561,6 +1578,16 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    -webkit-transition: -webkit-transform .7s ease-in-out;
+    transition: -webkit-transform .7s ease-in-out;
+    transition: transform .7s ease-in-out;
+    transition: transform .7s ease-in-out, -webkit-transform .7s ease-in-out;
+    -webkit-transform: translate3d(-90%, 0vh, 0);
+            transform: translate3d(-90%, 0vh, 0);
+}
+.contact__wrapper.is-showing {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
 }
 .contact__form {
     -webkit-flex: 1 1 65%;
@@ -1612,6 +1639,12 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
 }
 .contact__form textarea:focus::placeholder {
     color: #333;
+}
+.contact__form__success {
+    padding: 1em 2em;
+    color: white;
+    font-size: 32px;
+    font-size: 2rem;
 }
 .contact__form__field {
     margin-bottom: 1em;

@@ -1,4 +1,37 @@
 $(document).ready(function(){
+
+  // language
+  var userLang = navigator.language || navigator.userLanguage;
+  var lang = new Lang();
+  lang.dynamic('ru', '/js/langpack/ru.json');
+
+  lang.init({
+      defaultLang: 'en'
+  });
+
+  // if(userLang.split('-')[0] == 'ru') {
+  //   lang.init({
+  //       defaultLang: 'en',
+  //       currentLang: 'ru',
+  //   });
+  // } else {
+  //   lang.init({
+  //       defaultLang: 'en'
+  //   });
+  // }
+
+  // switch language
+  $('.sidebar__lang').on('click', function(){
+    if ($(this).is('.en')){
+      lang.change('ru');
+      $(this).removeClass('en').addClass('ru');
+    } else {
+      lang.change('en');
+      $(this).removeClass('ru').addClass('en');
+    }
+    return false;
+  });
+
   // hamburger
   $('.mobile-navi').on('click', function(){
     $(this).find('.hamburger').toggleClass('is-active');
@@ -44,10 +77,16 @@ $(document).ready(function(){
       $('.portfolio__item').each(function(i){
         setTimeout(function(){
           $('.portfolio__item').eq(i).addClass('is-showing');
-        }, (700 * (Math.exp(i * 0.2))) - 700);
+        }, (700 * (Math.exp(i * 0.14))) - 700);
       });
     }
 
+    //contact form
+    if (wScroll > $('.contact').offset().top - ($(window).height() / 3.5)) {
+      $('.contact__wrapper').addClass('is-showing');
+    } else{
+      $('.contact__wrapper').removeClass('is-showing');
+    };
   });
   // end Parallax
 
@@ -77,10 +116,13 @@ $(document).ready(function(){
 
   const $element = $('input[type="range"]');
   const $tooltip = $('#range-tooltip');
+  const lowText = lang.translate('Great! Seems to be an simple project and could be compleated quite fast');
+  const midText = lang.translate('Awesome! You have an serious project with complex business logic');
+  const highText = lang.translate('With a project of this size I would like to talk with you before setting an correct budjet.');
   const sliderStates = [
-    {name: "low", tooltip: "Great, we're confident we can complete your project within <strong>24 hours</strong> of launch.", range: _.range(1, 7) },
-    {name: "med", tooltip: "Looks good! We can complete a project of this size within <strong>48 hours</strong> of launch.", range: _.range(7, 20)},
-    {name: "high", tooltip: "With a project of this size we'd like to talk with you before setting a completion timeline.", range: [21] },
+    {name: "low", tooltip: lowText, range: _.range(1, 7) },
+    {name: "med", tooltip: midText, range: _.range(7, 20)},
+    {name: "high", tooltip: highText, range: [21] },
   ];
   var currentState;
   var $handle;
@@ -198,9 +240,9 @@ $(document).ready(function(){
           $('.calculator__form__group--forStep3').addClass('is-active');
         }
         if ( projectType2 ){
-          $('.calculator__form__group--forStep3 .calculator__form__heading span').text('How many screens have to be made?');
+          $('.calculator__form__group--forStep3 .calculator__form__heading span').text(lang.translate('How many screens have to be made?'));
         } else {
-          $('.calculator__form__group--forStep3 .calculator__form__heading span').text('How many pages have to be made ?');
+          $('.calculator__form__group--forStep3 .calculator__form__heading span').text(lang.translate('How many pages have to be made ?'));
         }
 
         // Set featured options
@@ -305,7 +347,8 @@ $(document).ready(function(){
               }
 
           } else {
-            $('.contact__form').append('<div class="alert alert-success">' + data.message + '</div>');
+            $('.contact__form__field').fadeOut();
+            $('.contact__form').append('<div class="contact__form__success">' + data.message + '</div>');
           }
         }).fail(function(data) {
           console.log(data);

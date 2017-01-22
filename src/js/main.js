@@ -311,6 +311,7 @@ $(document).ready(function(){
 
   // Contact form
   $('.btn--contact').on('click', function(e){
+
     if ($(this).is('.validateTextarea')){
       e.preventDefault();
       var textAreaVal = $(this).closest('.contact__form').find('textarea').val();

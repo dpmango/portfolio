@@ -36,6 +36,7 @@ $(document).ready(function(){
   $('.mobile-navi').on('click', function(){
     $(this).find('.hamburger').toggleClass('is-active');
     $(this).parent().find('.sidebar').toggleClass('is-active');
+    $(this).parent().find('.content').toggleClass('is-active');
   });
 
  	// Prevent # errors
@@ -58,8 +59,8 @@ $(document).ready(function(){
   });
 
   // Parallax
-  $(window).scroll(function() {
-		var wScroll = $(this).scrollTop();
+  function parallax(){
+    var wScroll = $(this).scrollTop();
     var HeroContainerHeight = $('.hero').height();
 
     // hero
@@ -87,7 +88,33 @@ $(document).ready(function(){
     } else{
       $('.contact__wrapper').removeClass('is-showing');
     };
+  };
+
+  // enovoke functions
+  calcWidth();
+  enableParallax();
+
+  $(window).resize(function() {
+    calcWidth();
+    enableParallax();
   });
+
+  function calcWidth(){
+    if ( $(window).width() > 768 ) {
+      desktopDetected = true;
+    } else{
+      desktopDetected = false;
+      $('.portfolio__item').addClass('is-showing');
+      $('.contact__wrapper').addClass('is-showing');
+    }
+  }
+  function enableParallax(){
+    if ( desktopDetected  == true ) {
+      $(window).scroll(function() {
+        parallax();
+      });
+    }
+  }
   // end Parallax
 
   // Portfolio projects

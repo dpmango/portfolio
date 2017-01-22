@@ -4,7 +4,7 @@ html
 
   body
 
-    .flex.h100
+    .h100
       // Mobile hamburger
       .mobile-navi
         .mobile-navi__wrap
@@ -65,42 +65,84 @@ html
             .heading__back(lang="en") all about web
             .heading__front(lang="en") About
           .technologies
-            .technologies__item
+            .technologies__item.tooltip
               i.ico.ico-html
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span HTML
+            .technologies__item.tooltip
               i.ico.ico-css
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span CSS
+            .technologies__item.tooltip
               i.ico.ico-javascript
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span JavaScript
+            .technologies__item.tooltip
               i.ico.ico-postcss
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span PostCss
+            .technologies__item.tooltip
               i.ico.ico-sass
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span SASS
+            .technologies__item.tooltip
               i.ico.ico-jquery
+              .tooltip__wrapper
+                .tooltip__inner
+                  span jQuery
             //- .technologies__item
             //-   i.ico.ico-npm
             //- .technologies__item
             //-   i.ico.ico-bower
             //- .technologies__item
             //-   i.ico.ico-gulp
-            .technologies__item
+            .technologies__item.tooltip
               i.ico.ico-git
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span Git
+            .technologies__item.tooltip
               i.ico.ico-pug
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span Pug (Jade)
+            .technologies__item.tooltip
               i.ico.ico-react
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span React.js
+            .technologies__item.tooltip
               i.ico.ico-rails
+              .tooltip__wrapper
+                .tooltip__inner
+                  span Ruby on Rails
           // visuals
           .technologies
-            .technologies__item
+            .technologies__item.tooltip
               i.ico.ico-sketch
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span Sketch App
+            .technologies__item.tooltip
               i.ico.ico-ps
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span Photoshop
+            .technologies__item.tooltip
               i.ico.ico-illustator
-            .technologies__item
+              .tooltip__wrapper
+                .tooltip__inner
+                  span Illustator
+            .technologies__item.tooltip
               i.ico.ico-xd
+              .tooltip__wrapper
+                .tooltip__inner
+                  span Adobe Xd
           .about__text
             .about__text__paragraph
               .about__text__heading(lang="en") Who am I ?
@@ -393,7 +435,7 @@ html
         // Footer
         .footer
           .footer__copy
-            | © 2014-2017 Sergey Khmelevskoy. 2.0.3
+            | © 2014-2017 Sergey Khmelevskoy. 2.0.4
           .footer__credentials
             //- .footer__heading Inspired and used
             a(href="http://codepen.io/FabioG/pen/MaZpJp" target="_blank") © plane animation by Fabio

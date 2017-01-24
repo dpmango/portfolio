@@ -69,9 +69,10 @@ $(document).ready(function(){
         'padding-top', wScroll / 25 + 'vh'
       );
     };
-    $('.parallax__heading').css(
-      'padding-top', wScroll / 50 + 'vh'
-    )
+    // slow
+    // $('.parallax__heading').css(
+    //   'padding-top', wScroll / 50 + 'vh'
+    // )
 
     //portfolio items
     if(wScroll > $('.portfolio').offset().top - ($(window).height() / 2)) {

@@ -146,10 +146,10 @@ html
           .about__text
             .about__text__paragraph
               .about__text__heading(lang="en") Who am I ?
-              .about__text__words(lang="en") My name is Sergey. I do web-design and front-end developement over the past 4 years.
+              .about__text__words(lang="en") My name is Sergey. I do web-design and front-end development over the past 4 years.
             .about__text__paragraph
               .about__text__heading(lang="en") What I do ?
-              .about__text__words(lang="en") I love to work on cool projects and help SME's to grow with an use of modern technologies and best practises.
+              .about__text__words(lang="en") I love to work on cool projects and help SME's to grow with an use of modern technologies and best practices.
 
         // Portfolio
         .portfolio#sectionPortfolio
@@ -164,7 +164,14 @@ html
             li.portfolio__navi__link(data-filter="code")
               a(href="#" lang="en") Code
           .portfolio__list
-
+            .portfolio__item(data-category="code")
+              img(src="images/portfolio/cinc.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name CINC Landing
+                .portfolio__item__short ROI Calculator tool for the landing page with fancy animations
+                a.portfolio__item__link(href="http://go.commissionsinc.com/calculate-your-profit" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-link-external
             .portfolio__item(data-category="code")
               img(src="images/portfolio/hamleys.png").img-responsive
               .portfolio__item__desc
@@ -187,7 +194,7 @@ html
               img(src="images/portfolio/delivery.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Delivery City
-                .portfolio__item__short Crossbrowser support, fixing flexbox issues, performance and layout problems
+                .portfolio__item__short Fixing flexbox issues, crossbrowser support, performance and layout problems
                 a.portfolio__item__link(href="https://dpmango.github.io/delivery-city/src/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
@@ -196,7 +203,7 @@ html
               img(src="images/portfolio/crm.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name CRM
-                .portfolio__item__short Nice an simple CRM base on material framework
+                .portfolio__item__short Nice and simple CRM base on material framework
                 a.portfolio__item__link(href="http://dpmango.github.io/crm/dist/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
@@ -205,7 +212,7 @@ html
               img(src="images/portfolio/essay.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Roowrite
-                .portfolio__item__short Extended landing type of website with order and A/B testing pages
+                .portfolio__item__short Extended landing page type of site with order features and A/B testing
                 a.portfolio__item__link(href="http://f-end.ru/demo/0716-roowrite/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
@@ -214,16 +221,16 @@ html
               img(src="images/portfolio/polis.png").img-responsive.logo-portfolio
               .portfolio__item__desc
                 .portfolio__item__name POLIS812
-                .portfolio__item__short Online insurance and tour operator wesite redesign
-                a.portfolio__item__link(href="https://dpmango.github.io/polis812/" target="_blank")
+                .portfolio__item__short Online insurance and tour operator website redesign
+                a.portfolio__item__link(href="https://polis812.ru/" target="_blank")
                   span(lang="en") Check live
-                  i.icon-github
+                  i.icon-link-external
 
             .portfolio__item(data-category="code")
               img(src="images/portfolio/brightkite.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name BrightKite
-                .portfolio__item__short Psd to html with an erb templates integration on Ruby on Rails
+                .portfolio__item__short Psd to html together with an erb templates integration on Ruby on Rails
                 a.portfolio__item__link(href="https://brightkite.com" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
@@ -232,7 +239,7 @@ html
               img(src="images/portfolio/ats.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name ATS Group
-                .portfolio__item__short Site from scratch for stainless steel traiding company
+                .portfolio__item__short Site from scratch for stainless steel trading company
                 a.portfolio__item__link(href="http://ats77.ru/" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
@@ -241,7 +248,7 @@ html
               img(src="images/portfolio/domishka.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Domishka
-                .portfolio__item__short Psd to html
+                .portfolio__item__short Just psd to html :) It's here because the UI is nice
                 a.portfolio__item__link(href="http://f-end.ru/demo/0416-domishko/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
@@ -268,7 +275,7 @@ html
               img(src="images/portfolio/nazarbaev.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name President library
-                .portfolio__item__short National library of Kazahstan behalf of Nursultan Nazarbayev
+                .portfolio__item__short National library of Kazahstan on behalf of Nursultan Nazarbayev
                 a.portfolio__item__link(href="http://f-end.ru/demo/0816-libkz/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
@@ -277,7 +284,7 @@ html
               img(src="images/portfolio/citysakh.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name City Sakh
-                .portfolio__item__short One of the leading news portal of City Sakhalin html/css coding
+                .portfolio__item__short One of the leading media portal of City Sakhalin html/css coding
                 a.portfolio__item__link(href="https://citysakh.ru" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
@@ -286,7 +293,7 @@ html
               img(src="images/portfolio/kc-spb.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Communal Service
-                .portfolio__item__short Site from scratch on MODX CMF
+                .portfolio__item__short Site from scratch on MODX
                 a.portfolio__item__link(href="http://kc-spb.ru/" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
@@ -304,7 +311,7 @@ html
         .calculator#sectionCalculator
           .heading.heading--calculator
             .heading__back(lang="en") Estimate project
-            .heading__front(lang="en") Online cost estimatior
+            .heading__front(lang="en") Online cost estimator
           //.calculator__short If you have an intersting project, you can estimate the costs
 
           form.calculator__form
@@ -435,7 +442,7 @@ html
         // Footer
         .footer
           .footer__copy
-            | © 2014-2017 Sergey Khmelevskoy. 2.0.4
+            | © 2014-2017 Sergey Khmelevskoy. v. 2.0.5
           .footer__credentials
             //- .footer__heading Inspired and used
             a(href="http://codepen.io/FabioG/pen/MaZpJp" target="_blank") © plane animation by Fabio

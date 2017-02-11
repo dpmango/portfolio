@@ -51,10 +51,13 @@
               <div class="tooltip__wrapper">
                 <div class="tooltip__inner"><span>github</span></div>
               </div></a></div>
-          <div class="sidebar__lang en"><a class="tooltip tooltip--language" href="#"><i class="icon icon-language"></i>
-              <div class="tooltip__wrapper">
-                <div class="tooltip__inner"><span lang="en">Сменить язык</span></div>
-              </div></a></div>
+          <!--.sidebar__lang.en
+          a.tooltip.tooltip--language(href="#")
+            i.icon.icon-language
+            .tooltip__wrapper
+              .tooltip__inner
+                span(lang="en") Сменить язык
+          -->
         </div>
       </section>
       <!--CONTENT::START-->
@@ -169,6 +172,12 @@
             <li class="portfolio__navi__link" data-filter="code"><a href="#" lang="en">Code</a></li>
           </ul>
           <div class="portfolio__list">
+            <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/sole.png">
+              <div class="portfolio__item__desc">
+                <div class="portfolio__item__name">Sole fitness</div>
+                <div class="portfolio__item__short">E-commerce project. Front-end development from .sketch assets</div><a class="portfolio__item__link" href="http://dpmango.github.io/sole" target="_blank"><span lang="en">Check live</span><i class="icon-github"></i></a>
+              </div>
+            </div>
             <div class="portfolio__item" data-category="code"><img class="img-responsive" src="images/portfolio/cinc.png">
               <div class="portfolio__item__desc">
                 <div class="portfolio__item__name">CINC Landing</div>

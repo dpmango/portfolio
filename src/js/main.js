@@ -79,7 +79,7 @@ $(document).ready(function(){
       $('.portfolio__item').each(function(i){
         setTimeout(function(){
           $('.portfolio__item').eq(i).addClass('is-showing');
-        }, (700 * (Math.exp(i * 0.14))) - 700);
+        }, (700 * (Math.exp(i * 0.1))) - 700);
       });
     }
 
@@ -121,14 +121,23 @@ $(document).ready(function(){
   // Portfolio projects
   $('.portfolio__navi li').on('click', function(){
     var category = $(this).data('filter');
+    var language = $(this).data('filter-lang');
     $('.portfolio__list .portfolio__item').each(function(){
-      if ( category == "all" || $(this).data('category') == "all" ){
+      if ( category == "all" || $(this).data('category') == "all" || $(this).data('category') == category){
         $(this).fadeIn();
-      } else if ( $(this).data('category') != category ){
-        $(this).fadeOut();
       } else {
-        $(this).fadeIn();
+        $(this).fadeOut();
       }
+
+      // sortby language
+      if ( language == "en" ){
+        if ( $(this).data('language') == 'en' ){
+            $(this).fadeIn();
+        } else {
+          $(this).fadeOut();
+        }
+      }
+
     });
   });
 

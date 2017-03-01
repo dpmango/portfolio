@@ -286,6 +286,16 @@ body, html
       margin: 0 1.25em
       color: color($fontColor a(70%))
       transition: color 0.4
+      &--language
+        position: relative
+        .ico-en
+          position: absolute
+          size: 25px
+          left: -5px
+          top: 50%
+          transform: translateY(-50%)
+        span
+          padding-left: 30px
       a
         position: relative
         z-index: 2
@@ -375,6 +385,10 @@ body, html
         font-size: 2rem
       &:hover
         transform: scale(1.15)
+    &__lang
+      position: absolute
+      left: 1.5em
+      bottom: 1.1em
 
 
 // calculator

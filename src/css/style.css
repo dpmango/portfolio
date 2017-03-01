@@ -485,6 +485,22 @@ body, html {
     position: relative;
     z-index: 2;
 }
+.portfolio__navi__link--language {
+    position: relative;
+}
+.portfolio__navi__link--language .ico-en {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.portfolio__navi__link--language span {
+    padding-left: 30px;
+}
 .portfolio__navi__link::before {
     position: absolute;
     top: 100%;
@@ -664,6 +680,11 @@ body, html {
     -webkit-transform: scale(1.15);
         -ms-transform: scale(1.15);
             transform: scale(1.15);
+}
+.portfolio__item__lang {
+    position: absolute;
+    bottom: 1.1em;
+    left: 1.5em;
 }
 /* calculator */
 .calculator {
@@ -1467,6 +1488,20 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     height: 117px;
     height: 3.5em;
     background-image: url('../images/tech-xd.svg');
+}
+.ico-en {
+    width: 256px;
+    width: 1.7em;
+    height: 256px;
+    height: 1.7em;
+    background-image: url('../images/lang-en.svg');
+}
+.ico-ru {
+    width: 256px;
+    width: 1.7em;
+    height: 256px;
+    height: 1.7em;
+    background-image: url('../images/lang-ru.svg');
 }
 /* FONTS */
 @font-face {

@@ -57,8 +57,7 @@ html
           .hero__title(lang="en") UI/UX Designer <br> <span>front-end Developer<span>
           .hero__subtitle
           .hero__buttons
-            a.btn.btn--hero(href="#sectionPortfolio" lang="en") Watch portfolio
-            a.btn.btn--hero(href="#sectionCalculator" lang="en") Estimate project
+            a.btn.btn--hero(href="#sectionPortfolio" lang="en") Portfolio
         // About
         .about#sectionAbout
           .heading.parallax__heading
@@ -146,10 +145,10 @@ html
           .about__text
             .about__text__paragraph
               .about__text__heading(lang="en") Who am I ?
-              .about__text__words(lang="en") My name is Sergey. I do web-design and front-end development over the past 4 years.
+              .about__text__words(lang="en") My name is Sergey. My name is Sergey. I do UX/UI design and front-end development over the past 4 years.
             .about__text__paragraph
               .about__text__heading(lang="en") What I do ?
-              .about__text__words(lang="en") I love to work on cool projects and help SME's to grow with an use of modern technologies and best practices.
+              .about__text__words(lang="en") I love to work on cool projects and help SME's to grow with a use of modern technologies and best practices.
 
         // Portfolio
         .portfolio#sectionPortfolio
@@ -159,12 +158,37 @@ html
           ul.portfolio__navi
             li.portfolio__navi__link.active(data-filter="all")
               a(href="#" lang="en") All
-            li.portfolio__navi__link(data-filter="design")
-              a(href="#" lang="en") Design
             li.portfolio__navi__link(data-filter="code")
               a(href="#" lang="en") Code
+            li.portfolio__navi__link(data-filter="design")
+              a(href="#" lang="en") Design
+            li.portfolio__navi__link.portfolio__navi__link--language(data-filter-lang="en")
+              a(href="#" lang="en")
+                i.ico.ico-en
+                span EN
+
           .portfolio__list
-            .portfolio__item(data-category="code")
+            .portfolio__item(data-category="code" data-language="ru")
+              img(src="images/portfolio/mebius.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Mebius - city quests
+                .portfolio__item__short Front-end developement
+                a.portfolio__item__link(href="http://dpmango.github.io/mebius" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-github
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="en")
+              img(src="images/portfolio/mpa.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Matt Porter Supplements
+                .portfolio__item__short Landing page front-end development
+                a.portfolio__item__link(href="http://dpmango.github.io/mpa" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-github
+                .portfolio__item__lang
+                  i.ico.ico-en
+            .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/sole.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Sole fitness
@@ -172,7 +196,9 @@ html
                 a.portfolio__item__link(href="http://dpmango.github.io/sole" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
-            .portfolio__item(data-category="code")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="en")
               img(src="images/portfolio/cinc.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name CINC Landing
@@ -180,7 +206,9 @@ html
                 a.portfolio__item__link(href="http://go.commissionsinc.com/calculate-your-profit" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
-            .portfolio__item(data-category="code")
+                .portfolio__item__lang
+                  i.ico.ico-en
+            .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/hamleys.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Hamleys
@@ -188,8 +216,19 @@ html
                 a.portfolio__item__link(href="http://mvideo.hamleys.ru" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
-
-            .portfolio__item(data-category="code")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="en")
+              img(src="images/portfolio/chat.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Chat app prototype
+                .portfolio__item__short "Slack like" chat interactive prototype
+                a.portfolio__item__link(href="https://dpmango.github.io/footprint-chat/dist/" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-github
+                .portfolio__item__lang
+                  i.ico.ico-en
+            .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/doctor.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Doctor Frank
@@ -197,8 +236,9 @@ html
                 a.portfolio__item__link(href="http://dpmango.github.io/doctor-frank/dist/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
-
-            .portfolio__item(data-category="code")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/delivery.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Delivery City
@@ -206,8 +246,9 @@ html
                 a.portfolio__item__link(href="https://dpmango.github.io/delivery-city/src/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
-
-            .portfolio__item(data-category="code")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/crm.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name CRM
@@ -215,8 +256,9 @@ html
                 a.portfolio__item__link(href="http://dpmango.github.io/crm/dist/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
-
-            .portfolio__item(data-category="code")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="en")
               img(src="images/portfolio/essay.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Roowrite
@@ -224,8 +266,9 @@ html
                 a.portfolio__item__link(href="http://f-end.ru/demo/0716-roowrite/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
-
-            .portfolio__item(data-category="all")
+                .portfolio__item__lang
+                  i.ico.ico-en
+            .portfolio__item(data-category="all" data-language="ru")
               img(src="images/portfolio/polis.png").img-responsive.logo-portfolio
               .portfolio__item__desc
                 .portfolio__item__name POLIS812
@@ -233,8 +276,9 @@ html
                 a.portfolio__item__link(href="https://polis812.ru/" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
-
-            .portfolio__item(data-category="code")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="en")
               img(src="images/portfolio/brightkite.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name BrightKite
@@ -242,8 +286,9 @@ html
                 a.portfolio__item__link(href="https://brightkite.com" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
-
-            .portfolio__item(data-category="all")
+                .portfolio__item__lang
+                  i.ico.ico-en
+            .portfolio__item(data-category="all" data-language="ru")
               img(src="images/portfolio/ats.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name ATS Group
@@ -251,17 +296,9 @@ html
                 a.portfolio__item__link(href="http://ats77.ru/" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
-
-            .portfolio__item(data-category="code")
-              img(src="images/portfolio/domishka.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Domishka
-                .portfolio__item__short Just psd to html :) It's here because the UI is nice
-                a.portfolio__item__link(href="http://f-end.ru/demo/0416-domishko/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-
-            .portfolio__item(data-category="all")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="all" data-language="ru")
               img(src="images/portfolio/kopter.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name KvadrKopters
@@ -269,8 +306,9 @@ html
                 a.portfolio__item__link(href="https://www.behance.net/gallery/46760989/KvadroKopters-drone-ecommerce/" target="_blank")
                   span(lang="en") Check on behance
                   i.icon-behance2
-
-            .portfolio__item(data-category="design")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="design" data-language="ru")
               img(src="images/portfolio/naty.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Naty
@@ -278,8 +316,9 @@ html
                 a.portfolio__item__link(href="https://www.behance.net/gallery/46894267/Naty-E-commerce-webdesign" target="_blank")
                   span(lang="en") Check on behance
                   i.icon-behance2
-
-            .portfolio__item(data-category="code")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/nazarbaev.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name President library
@@ -287,8 +326,9 @@ html
                 a.portfolio__item__link(href="http://f-end.ru/demo/0816-libkz/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
-
-            .portfolio__item(data-category="code")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/citysakh.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name City Sakh
@@ -296,8 +336,9 @@ html
                 a.portfolio__item__link(href="https://citysakh.ru" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
-
-            .portfolio__item(data-category="all")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="all" data-language="ru")
               img(src="images/portfolio/kc-spb.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Communal Service
@@ -305,8 +346,9 @@ html
                 a.portfolio__item__link(href="http://kc-spb.ru/" target="_blank")
                   span(lang="en") Check live
                   i.icon-link-external
-
-            .portfolio__item(data-category="design")
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="design" data-language="ru")
               img(src="images/portfolio/zerno.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Zerno market
@@ -314,7 +356,8 @@ html
                 a.portfolio__item__link(href="https://www.behance.net/gallery/46973381/Web-app-design-Zernomarket" target="_blank")
                   span(lang="en") Check on behance
                   i.icon-behance2
-
+                .portfolio__item__lang
+                  i.ico.ico-ru
         // Calculator
         .calculator#sectionCalculator
           .heading.heading--calculator

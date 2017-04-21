@@ -166,18 +166,38 @@ html
               a(href="#" lang="en")
                 i.ico.ico-en
                 span EN
-
+    
           .portfolio__list
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/mebius.png").img-responsive
+            .portfolio__item(data-category="code" data-language="en")
+              img(src="images/portfolio/messly.png").img-responsive
               .portfolio__item__desc
-                .portfolio__item__name Mebius - city quests
-                .portfolio__item__short Front-end developement
-                a.portfolio__item__link(href="http://dpmango.github.io/mebius" target="_blank")
+                .portfolio__item__name Messly
+                .portfolio__item__short Landing pages developement for the UK-based marketplace platform that connects doctors with staffing managers
+                a.portfolio__item__link(href="https://www.mlocum.co.uk/doctors/" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-link-external
+                .portfolio__item__lang
+                  i.ico.ico-en    
+            .portfolio__item(data-category="code" data-language="ru")
+              img(src="images/portfolio/rocketbee.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Rocket Bee
+                .portfolio__item__short Front-end development
+                a.portfolio__item__link(href="https://dpmango.github.io/rocketbee/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
                 .portfolio__item__lang
                   i.ico.ico-ru
+            .portfolio__item(data-category="design" data-language="en")
+              img(src="images/portfolio/theia.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Theia
+                .portfolio__item__short Wireframes and mobile-first design for 
+                a.portfolio__item__link(href="https://www.behance.net/gallery/51798803/THEIA" target="_blank")
+                  span(lang="en") Check on behance
+                  i.icon-behance2
+                .portfolio__item__lang
+                  i.ico.ico-en
             .portfolio__item(data-category="code" data-language="en")
               img(src="images/portfolio/mpa.png").img-responsive
               .portfolio__item__desc
@@ -188,12 +208,32 @@ html
                   i.icon-github
                 .portfolio__item__lang
                   i.ico.ico-en
+            .portfolio__item(data-category="all" data-language="en")
+              img(src="images/portfolio/bitfire.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name BitFire
+                .portfolio__item__short Landing page Design and developemnt for the cloud mining platform 
+                a.portfolio__item__link(href="https://dpmango.github.io/bitfire/" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-github
+                .portfolio__item__lang
+                  i.ico.ico-en
             .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/sole.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Sole fitness
                 .portfolio__item__short E-commerce project. Front-end development from .sketch assets
                 a.portfolio__item__link(href="http://dpmango.github.io/sole" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-github
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="code" data-language="ru")
+              img(src="images/portfolio/mebius.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Mebius - city quests
+                .portfolio__item__short Front-end developement
+                a.portfolio__item__link(href="http://dpmango.github.io/mebius" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
                 .portfolio__item__lang
@@ -435,7 +475,7 @@ html
               hr
               .calculator__form__price__heading(lang="en") This project is about
               .calculator__form__price__result(lang="en") <span>0</span> h
-              .calculator__form__price__base(lang="en") (20$/h)
+              .calculator__form__price__base(lang="en") (30$/h)
 
         // Contact
         .contact#sectionContact

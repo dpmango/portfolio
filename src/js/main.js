@@ -47,7 +47,7 @@ $(document).ready(function(){
 	// smoth scroll
 	$('a[href^="#section"]').click(function(){
         var el = $(this).attr('href');
-        $('body').animate({
+        $('body, html').animate({
             scrollTop: $(el).offset().top}, 1000);
         return false;
 	});

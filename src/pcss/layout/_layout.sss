@@ -175,6 +175,24 @@ body, html
     &.is-active
       transform: translate3d(130px, 0, 0)
 
+.banner
+  display: flex
+  align-items: center
+  justify-content: center
+  position: fixed
+  right: -45px
+  top: 45px
+  z-index: 9
+  transform: rotate(45deg)
+  color: white
+  background: #6FDA44
+  padding: 0px 40px
+  box-shadow: 0 10px 20px color(black a(20%))
+  transition: all .3s ease
+  &:hover
+    box-shadow: 0 10px 20px color(black a(40%))  
+
+
 .hero
   position: relative
   overflow: hidden
@@ -669,6 +687,8 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle
   padding: 3vh 5vw
   color: color(white a(70%))
   &__copy
+    span
+      font-size: 10px
   &__credentials
     flex: 1 1 auto
   &__heading

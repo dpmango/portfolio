@@ -52,6 +52,7 @@ html
                   span(lang="en") Сменить язык
       //CONTENT::START
       section.content
+        // HERO
         .hero
           .hero__name(lang="en") Sergey Khmelevskoy
           .hero__title(lang="en") UI/UX Designer <br> <span>front-end Developer<span>
@@ -94,12 +95,6 @@ html
               .tooltip__wrapper
                 .tooltip__inner
                   span jQuery
-            //- .technologies__item
-            //-   i.ico.ico-npm
-            //- .technologies__item
-            //-   i.ico.ico-bower
-            //- .technologies__item
-            //-   i.ico.ico-gulp
             .technologies__item.tooltip
               i.ico.ico-git
               .tooltip__wrapper
@@ -145,7 +140,7 @@ html
           .about__text
             .about__text__paragraph
               .about__text__heading(lang="en") Who am I ?
-              .about__text__words(lang="en") My name is Sergey. My name is Sergey. I do UX/UI design and front-end development over the past 4 years.
+              .about__text__words(lang="en") My name is Sergey. I do UX/UI design and front-end development over the past 4 years.
             .about__text__paragraph
               .about__text__heading(lang="en") What I do ?
               .about__text__words(lang="en") I love to work on cool projects and help SME's to grow with a use of modern technologies and best practices.
@@ -268,24 +263,14 @@ html
                   i.icon-github
                 .portfolio__item__lang
                   i.ico.ico-en
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/doctor.png").img-responsive
+            .portfolio__item(data-category="all" data-language="ru")
+              img(src="images/portfolio/polis.png").img-responsive.logo-portfolio
               .portfolio__item__desc
-                .portfolio__item__name Doctor Frank
-                .portfolio__item__short Corporate site for a chain of medical clinics in Moscow
-                a.portfolio__item__link(href="http://dpmango.github.io/doctor-frank/dist/" target="_blank")
+                .portfolio__item__name POLIS812
+                .portfolio__item__short Online insurance and tour operator website redesign
+                a.portfolio__item__link(href="https://polis812.ru/" target="_blank")
                   span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/delivery.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Delivery City
-                .portfolio__item__short Fixing flexbox issues, crossbrowser support, performance and layout problems
-                a.portfolio__item__link(href="https://dpmango.github.io/delivery-city/src/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
+                  i.icon-link-external
                 .portfolio__item__lang
                   i.ico.ico-ru
             .portfolio__item(data-category="code" data-language="ru")
@@ -308,14 +293,14 @@ html
                   i.icon-github
                 .portfolio__item__lang
                   i.ico.ico-en
-            .portfolio__item(data-category="all" data-language="ru")
-              img(src="images/portfolio/polis.png").img-responsive.logo-portfolio
+            .portfolio__item(data-category="design" data-language="ru")
+              img(src="images/portfolio/zerno.png").img-responsive
               .portfolio__item__desc
-                .portfolio__item__name POLIS812
-                .portfolio__item__short Online insurance and tour operator website redesign
-                a.portfolio__item__link(href="https://polis812.ru/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
+                .portfolio__item__name Zerno market
+                .portfolio__item__short Marketpalce web-app design
+                a.portfolio__item__link(href="https://www.behance.net/gallery/46973381/Web-app-design-Zernomarket" target="_blank")
+                  span(lang="en") Check on behance
+                  i.icon-behance2
                 .portfolio__item__lang
                   i.ico.ico-ru
             .portfolio__item(data-category="code" data-language="en")
@@ -338,16 +323,6 @@ html
                   i.icon-link-external
                 .portfolio__item__lang
                   i.ico.ico-ru
-            .portfolio__item(data-category="all" data-language="ru")
-              img(src="images/portfolio/kopter.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name KvadrKopters
-                .portfolio__item__short E-commerce website design and code
-                a.portfolio__item__link(href="https://www.behance.net/gallery/46760989/KvadroKopters-drone-ecommerce/" target="_blank")
-                  span(lang="en") Check on behance
-                  i.icon-behance2
-                .portfolio__item__lang
-                  i.ico.ico-ru
             .portfolio__item(data-category="design" data-language="ru")
               img(src="images/portfolio/naty.png").img-responsive
               .portfolio__item__desc
@@ -359,43 +334,13 @@ html
                 .portfolio__item__lang
                   i.ico.ico-ru
             .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/nazarbaev.png").img-responsive
+              img(src="images/portfolio/doctor.png").img-responsive
               .portfolio__item__desc
-                .portfolio__item__name President library
-                .portfolio__item__short National library of Kazahstan on behalf of Nursultan Nazarbayev
-                a.portfolio__item__link(href="http://f-end.ru/demo/0816-libkz/" target="_blank")
+                .portfolio__item__name Doctor Frank
+                .portfolio__item__short Corporate site for a chain of medical clinics in Moscow
+                a.portfolio__item__link(href="http://dpmango.github.io/doctor-frank/dist/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/citysakh.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name City Sakh
-                .portfolio__item__short One of the leading media portal of City Sakhalin html/css coding
-                a.portfolio__item__link(href="https://citysakh.ru" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="all" data-language="ru")
-              img(src="images/portfolio/kc-spb.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Communal Service
-                .portfolio__item__short Site from scratch on MODX
-                a.portfolio__item__link(href="http://kc-spb.ru/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="design" data-language="ru")
-              img(src="images/portfolio/zerno.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Zerno market
-                .portfolio__item__short Marketpalce web-app design
-                a.portfolio__item__link(href="https://www.behance.net/gallery/46973381/Web-app-design-Zernomarket" target="_blank")
-                  span(lang="en") Check on behance
-                  i.icon-behance2
                 .portfolio__item__lang
                   i.ico.ico-ru
         // Calculator
@@ -409,7 +354,7 @@ html
             .calculator__form__group.calculator__form__group--forStep1.is-active
               .calculator__form__heading
                 .calculator__form__heading__num 1
-                span(lang="en") What services do you need ?
+                span(lang="en") What type of services ?
               .ac-custom.ac-checkbox.ac-checkmark.ac--four-items(autocomplete="off")
                 ul
                   li
@@ -425,7 +370,7 @@ html
             .calculator__form__group.calculator__form__group--forStep2
               .calculator__form__heading
                 .calculator__form__heading__num 2
-                span(lang="en") What kind of project do you have ?
+                span(lang="en") What kind of the project ?
               .ac-custom.ac-radio.ac-fill.ac--four-items(autocomplete="off")
                 ul
                   li
@@ -444,7 +389,7 @@ html
             .calculator__form__group.calculator__form__group--forStep3
               .calculator__form__heading
                 .calculator__form__heading__num 3
-                span(lang="en") How many pages have to be made ?
+                span(lang="en") How many pages have ?
               .calculator__form__range
                 input(type="range" id="calcPages" min="1" max="21" value="5")
                 span.rangeslider__tooltip#range-tooltip
@@ -452,7 +397,7 @@ html
             .calculator__form__group.calculator__form__group--forStep4
               .calculator__form__heading
                 .calculator__form__heading__num 4
-                span(lang="en") What kind of features you would like to have ?
+                span(lang="en") What kind of features ?
               .ac-custom.ac-checkbox.ac-checkmark.ac--four-items(autocomplete="off")
                 ul
                   li.featureFirst
@@ -533,10 +478,15 @@ html
         // Footer
         .footer
           .footer__copy
-            | © 2014-2017 Sergey Khmelevskoy. v. 2.0.5
+            | © 2014-2017 Sergey Khmelevskoy. <span>v. 2.1.0</span>
           .footer__credentials
-            //- .footer__heading Inspired and used
-            a(href="http://codepen.io/FabioG/pen/MaZpJp" target="_blank") © plane animation by Fabio
+        
+        // Banner
+        a(href='https://www.upwork.com/fl/sergeykhmelevskoy' target='_blank').banner
+          i.ico.ico-upwork
+          span TOP RATED
+              
+
 
     // Yandex.Metrika counter
     script(type='text/javascript').

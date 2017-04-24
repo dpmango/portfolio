@@ -1,8 +1,10 @@
 // Buttons
 
 .btn
+  -webkit-appearance: none
+  position: relative
   font-size: 1.2rem
-  border-radius: .4em
+  border-radius: .3em
   padding: .8em 1.5em
   margin: 1em 1em 1em 0em
   text-transform: uppercase
@@ -13,9 +15,21 @@
   cursor: pointer
   transition: box-shadow .4s ease-in-out
   &--hero
-    background: white
+    background: $colorOrange
+    color: white
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0 0 0 0
+      border: 2px solid white
+      opacity: 0
+      border-radius: .3em
+      transition:  all .3s ease-in-out
     &:hover
       box-shadow: 0 0 3em rgba(255, 255, 255, .3)
+      &::after
+        position: absolute 5px
+        opacity: 1
   &--contact
     display: inline-block
     background: $colorOrange

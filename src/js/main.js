@@ -141,6 +141,12 @@ $(document).ready(function(){
     });
   });
 
+  // Fake click
+  $('.portfolio__item').on('click', function(e){
+    var url = $(this).find('a').attr('href');
+    window.open(url, '_blank');
+  });
+
   // Calculator logic
 
   // $('input[type="range"]').rangeslider({

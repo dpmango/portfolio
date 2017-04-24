@@ -297,6 +297,38 @@ body, html {
                 transform: translate3d(130px, 0, 0);
     }
 }
+.banner {
+    position: fixed;
+    top: 45px;
+    right: -45px;
+    z-index: 9;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    padding: 0px 40px;
+    background: #6FDA44;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+}
+.banner:hover {
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
 .hero {
     position: relative;
     overflow: hidden;
@@ -1079,8 +1111,10 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
 }
-.footer__copy
-  .footer__credentials {
+.footer__copy span {
+    font-size: 10px;
+}
+.footer__credentials {
     -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -1503,6 +1537,19 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     height: 1.7em;
     background-image: url('../images/lang-ru.svg');
 }
+.ico-upwork {
+    margin-bottom: -5px;
+    width: -71.5px;
+    width: 46px;
+    height: -148px;
+    height: 40px;
+    background-image: url('../images/upwork-logo.svg');
+    background-position: left bottom;
+    background-size: 106px 40px;
+}
+/* .ico-upwork */
+/*   @mixin myIcon upwork-top.png */
+/*   size: 106px 40px */
 /* FONTS */
 @font-face {
     font-weight: 400;

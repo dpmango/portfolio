@@ -146,6 +146,9 @@ $(document).ready(function(){
     var url = $(this).find('a').attr('href');
     window.open(url, '_blank');
   });
+  $('.portfolio__item a').on('click', function(e){
+    e.preventDefault();
+  })
 
   // Calculator logic
 

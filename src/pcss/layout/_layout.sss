@@ -32,7 +32,7 @@ a
 body, html
   background: white
   color: $fontColor
-  font-family: 'LatoWeb'
+  font-family: 'Lato', sans-serif
   font-size: 16px
   max-width: 100%
   min-height: 100vh
@@ -116,7 +116,7 @@ body, html
     overflow: hidden
   &__name
     font-size: 3.5rem
-    font-family: 'LatoWebBold'
+    font-weight: 700
     margin: 2rem 2rem 0 2rem
     text-shadow: 2px 3px 1px color($colorGreen a(50%))
     &::selection
@@ -180,17 +180,17 @@ body, html
   align-items: center
   justify-content: center
   position: fixed
-  right: -45px
-  top: 45px
+  right: -60px
+  top: 30px
   z-index: 9
-  transform: rotate(45deg)
+  transform: rotate(45deg) scale(.8)
   color: white
   background: #6FDA44
   padding: 0px 40px
   box-shadow: 0 10px 20px color(black a(20%))
   transition: all .3s ease
   &:hover
-    box-shadow: 0 10px 20px color(black a(40%))  
+    box-shadow: 0 10px 20px color(black a(40%))
 
 
 .hero
@@ -210,38 +210,92 @@ body, html
     opacity: .1
     z-index: 1
     // will-change: transform
+  &__wrapper
+    display: flex
+    align-items: center
+    @media($tablet)
+      flex-direction: column-reverse
+  &__left
+    flex: 0 1 auto
   &__name
     position: relative
     z-index: 2
     color: white
-    padding-top: 30vh
+    margin-top: 30vh
     margin-left: 10vw
     font-size: 1.2rem
+    @media($tablet)
+      margin-top: 5vh
   &__title
     display: inline-block
     position: relative
     z-index: 2
-    margin-top: 5vh
+    margin-top: 3vh
     margin-left: 10vw
     font-size: 4rem
-    line-height: 1.25em
-    font-family: 'LatoWebBold'
+    line-height: 1.3
+    font-weight: 700
     text-transform: uppercase
     color: white
     text-shadow: 0px 6px 1px color(black a(35%))
     @media($tablet)
-      font-size: 3rem
+      font-size: 2.5rem
     span
-      font-size: 3rem
+      display: block
+      font-size: 2.5rem
+      font-weight: 400
+      margin-top: .25em
+      text-shadow: 0px 4px 1px color(black a(25%))
+      @media($tablet)
+        font-size: 2rem
   &__buttons
     position: relative
     z-index: 3
     margin-left: 10vw
-    margin-top: 5vh
+    margin-top: 0vh
     @media($tablet)
       display: flex
       flex-wrap: wrap
+  &__right
+    flex: 1 1 auto
+    margin-right: 10vw
+  &__avatar
+    position: relative
+    z-index: 9
+    border-radius: 50%
+    size: 150px
+    margin-top: 23vh
+    margin-left: 10vw
+    border: 8px solid color(black a(35%))
+    overflow: hidden
+    &::after
+      position: absolute
+      top: 0
+      left: -75%
+      z-index: 2
+      display: block
+      content: ''
+      width: 50%
+      height: 100%
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+      transform: skewX(-25deg)
+    &:hover
+      &::after
+        animation: shine .75s
 
+    @media($tablet)
+      margin-top: 15vh
+      size: 130px
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-55%, -45%) scale(1.15)
+      max-width: 100%
+
+@keyframes shine
+  100%
+    left: 125%
 
 //about
 .about
@@ -260,7 +314,7 @@ body, html
       text-transform: uppercase
       font-size: 1.2rem
       margin-bottom: 1em
-      font-family: 'LatoWebBold'
+      font-weight: 700
     &__words
       line-height: 1.5em
 
@@ -283,7 +337,7 @@ body, html
 
   &__navi
     text-align: center
-    font-family: 'LatoWebBold'
+    font-weight: 700
     list-style: none
     margin: 0
     padding: 0
@@ -390,6 +444,7 @@ body, html
       padding-bottom: 1vh
     &__short
       opacity: .7
+      line-height: 1.2
     &__link
       display: block
       position: absolute
@@ -407,6 +462,8 @@ body, html
       position: absolute
       left: 1.5em
       bottom: 1.1em
+      .ico
+        font-size: .8rem
 
 
 // calculator
@@ -433,7 +490,7 @@ body, html
         transform: translate3d(0, 0, 0)
     &__heading
       text-transform: uppercase
-      font-family: 'LatoWebBold'
+      font-weight: 700
       margin-bottom: 1em
       font-size: 1.4rem
       &__num
@@ -464,7 +521,7 @@ body, html
       &__result
         margin-top: 0em
         line-height: 1
-        font-family: 'LatoWebBold'
+        font-weight: 700
       &__base
         font-size: 1.2rem
         align-self: flex-end
@@ -648,10 +705,17 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle
         display: inline-block
 
   &__direct
-    flex: 1 1 35%
+    flex: 0 1 190px
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    flex-direction: column
+
     &__item
       display: block
       color: white
+      margin-left: auto
+      margin-right: auto
       padding-bottom: 1em
       .icon
         font-size: 1.6rem
@@ -687,10 +751,12 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle
   padding: 3vh 5vw
   color: color(white a(70%))
   &__copy
+    flex: 1 0 auto
     span
       font-size: 10px
   &__credentials
-    flex: 1 1 auto
+    flex: 0 1 auto
+    margin-left: auto
   &__heading
     text-transform: uppercase
     color: white

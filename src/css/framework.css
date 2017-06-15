@@ -28,6 +28,9 @@
     position: relative;
 
 
+    display: inline-block;
+
+
     margin: 1em 1em 1em 0em;
 
 
@@ -48,13 +51,13 @@
     text-transform: uppercase;
 
 
+    font-weight: 700;
+
+
     font-size: 19.2px;
 
 
     font-size: 1.2rem;
-
-
-    font-family: 'LatoWebBold';
 
 
     cursor: pointer;
@@ -77,10 +80,10 @@
 .btn--hero {
 
 
-    background: #f46d36;
+    background: white;
 
 
-    color: white
+    color: #333
 }
 .btn--hero::after {
 

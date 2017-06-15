@@ -21,7 +21,7 @@ html
           .sidebar__navigation
             a(href="#sectionAbout" lang="en") About
             a(href="#sectionPortfolio" lang="en") Projects
-            a(href="#sectionCalculator" lang="en") Prices
+            // a(href="#sectionCalculator" lang="en") Prices
             a(href="#sectionContact" lang="en") Contact
           .sidebar__socials
             a.tooltip(href="skype:khmelevskoysergey?chat" target="_blank")
@@ -54,11 +54,16 @@ html
       section.content
         // HERO
         .hero
-          .hero__name(lang="en") Sergey Khmelevskoy
-          .hero__title(lang="en") UI/UX Designer <br> <span>front-end Developer<span>
-          .hero__subtitle
-          .hero__buttons
-            a.btn.btn--hero(href="#sectionPortfolio" lang="en") Portfolio
+          .hero__wrapper
+            .hero__left
+              .hero__name(lang="en") Sergey Khmelevskoy
+              .hero__title(lang="en") UI/UX Designer <br> <span>front-end Developer<span>
+              .hero__buttons
+                a.btn.btn--hero(href="#sectionPortfolio" lang="en") Portfolio
+            .hero__right
+              .hero__avatar
+                img(src='images/avatar.jpg')
+                    
         // About
         .about#sectionAbout
           .heading.parallax__heading
@@ -140,10 +145,10 @@ html
           .about__text
             .about__text__paragraph
               .about__text__heading(lang="en") Who am I ?
-              .about__text__words(lang="en") My name is Sergey. I do UX/UI design and front-end development over the past 4 years.
+              .about__text__words(lang="en") My name is Sergey. I'm UI/UX design and front-end development entrepreneur with 4 years of full-time experience under the belt. Originally from Moscow, Russia. Currently living in Vuokatti, Finland
             .about__text__paragraph
               .about__text__heading(lang="en") What I do ?
-              .about__text__words(lang="en") I love to work on cool projects and help SME's to grow with a use of modern technologies and best practices.
+              .about__text__words(lang="en") I specialize in user-centered interaction design and responsive web. My goal is to help SME's and startups grow with a use of cutting-edge technologies and best practices. 
 
         // Portfolio
         .portfolio#sectionPortfolio
@@ -163,7 +168,37 @@ html
                 span EN
     
           .portfolio__list
-            .portfolio__item(data-category="code" data-language="en")
+            .portfolio__item(data-category="code" data-language="ru")
+              img(src="images/portfolio/excellance.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Excellance 
+                .portfolio__item__short Sketch to html e-commerce project for the premium cosmetics brand.
+                a.portfolio__item__link(href="http://dpmango.github.io/excellance/src/" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-github
+                .portfolio__item__lang
+                  i.ico.ico-ru
+            .portfolio__item(data-category="all" data-language="en")
+              img(src="images/portfolio/locumrocket.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name LocumRocket 
+                .portfolio__item__short Prototyping, Design and front-end development for startup for freelance clinical work
+                a.portfolio__item__link(href="http://locumrocket.com" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-link-external
+                .portfolio__item__lang
+                  i.ico.ico-en 
+            .portfolio__item(data-category="all" data-language="en")
+              img(src="images/portfolio/simplyswitch.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name SimplySwitch 
+                .portfolio__item__short Redesign project for sales funnel. The prototype is interactive (click steps to process)
+                a.portfolio__item__link(href="http://dpmango.github.io/simplyswitch/src/" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-link-external
+                .portfolio__item__lang
+                  i.ico.ico-en 
+            .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/tattoo.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Tattoo Mania
@@ -173,6 +208,17 @@ html
                   i.icon-github
                 .portfolio__item__lang
                   i.ico.ico-ru
+            .portfolio__item(data-category="all" data-language="en")
+              img(src="images/portfolio/laso.png").img-responsive
+              .portfolio__item__desc
+                .portfolio__item__name Laso Health
+                .portfolio__item__short Design and development - homepage + search results. Project is in process
+                a.portfolio__item__link(href="http://dpmango.github.io/lasohealth/src/" target="_blank")
+                  span(lang="en") Check live
+                  i.icon-github
+                .portfolio__item__lang
+                  i.ico.ico-en
+                            
             .portfolio__item(data-category="code" data-language="en")
               img(src="images/portfolio/messly.png").img-responsive
               .portfolio__item__desc
@@ -182,27 +228,17 @@ html
                   span(lang="en") Check live
                   i.icon-link-external
                 .portfolio__item__lang
-                  i.ico.ico-en    
+                  i.ico.ico-en
             .portfolio__item(data-category="code" data-language="ru")
               img(src="images/portfolio/rocketbee.png").img-responsive
               .portfolio__item__desc
                 .portfolio__item__name Rocket Bee
-                .portfolio__item__short Front-end development
+                .portfolio__item__short Sketch to html Front-end development
                 a.portfolio__item__link(href="https://dpmango.github.io/rocketbee/" target="_blank")
                   span(lang="en") Check live
                   i.icon-github
                 .portfolio__item__lang
                   i.ico.ico-ru
-            .portfolio__item(data-category="design" data-language="en")
-              img(src="images/portfolio/theia.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Theia
-                .portfolio__item__short Wireframes and mobile-first design for 
-                a.portfolio__item__link(href="https://www.behance.net/gallery/51798803/THEIA" target="_blank")
-                  span(lang="en") Check on behance
-                  i.icon-behance2
-                .portfolio__item__lang
-                  i.ico.ico-en
             .portfolio__item(data-category="code" data-language="en")
               img(src="images/portfolio/mpa.png").img-responsive
               .portfolio__item__desc
@@ -253,16 +289,6 @@ html
                   i.icon-link-external
                 .portfolio__item__lang
                   i.ico.ico-en
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/hamleys.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Hamleys
-                .portfolio__item__short Simple landing page coding for new year promo with mVideo
-                a.portfolio__item__link(href="http://mvideo.hamleys.ru" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-ru
             .portfolio__item(data-category="code" data-language="en")
               img(src="images/portfolio/chat.png").img-responsive
               .portfolio__item__desc
@@ -354,7 +380,7 @@ html
                 .portfolio__item__lang
                   i.ico.ico-ru
         // Calculator
-        .calculator#sectionCalculator
+        // .calculator#sectionCalculator
           .heading.heading--calculator
             .heading__back(lang="en") Estimate project
             .heading__front(lang="en") Online cost estimator
@@ -430,7 +456,7 @@ html
               hr
               .calculator__form__price__heading(lang="en") This project is about
               .calculator__form__price__result(lang="en") <span>0</span> h
-              .calculator__form__price__base(lang="en") (30$/h)
+              .calculator__form__price__base(lang="en") (32$/h)
 
         // Contact
         .contact#sectionContact
@@ -454,7 +480,7 @@ html
 
           .contact__wrapper
 
-            form.contact__form(action="contact.php" method="POST")
+            // form.contact__form(action="contact.php" method="POST")
               .contact__form__field.contact__form__field--first.active
                 textarea.autoExpand(rows='4' data-min-rows='4' name="message" placeholder="Write about any projects or thoughts here ..." lang="en")
                 .contact__form__textarea-validation(lang="en") Hey! Please type an message (min. 10 symbols)
@@ -488,8 +514,9 @@ html
         // Footer
         .footer
           .footer__copy
-            | © 2014-2017 Sergey Khmelevskoy. <span>v. 2.1.0</span>
+            | © Sergey Khmelevskoy. <span>2.2.0</span>
           .footer__credentials
+            | Currently availalbe
         
         // Banner
         a(href='https://www.upwork.com/fl/sergeykhmelevskoy' target='_blank').banner

@@ -6,12 +6,15 @@
   &.parallax__heading
     padding-top: 10vh
   &--contact
-    padding: 0vh 0 20vh 0
-    margin-top: -30vh
+    position: absolute
+    padding: 0
+    top: 50%
+    left: 0
+    right: 0
+    z-index: 5
+    transform: translateY(-50%)
     .heading__back
       color: color(white a(15%))
-    .heading__front
-      color: white
   &--portfolio
     padding: 5vh 0 0vh 0
     .heading__back
@@ -29,6 +32,7 @@
     text-transform: uppercase
     margin-bottom: 0
     text-align: center
+    pointer-events: none
     @media($desktop)
       font-size: 4rem
     @media($tablet)

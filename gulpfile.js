@@ -8,6 +8,7 @@ var autoprefixer  = require('autoprefixer');
 var sugarss       = require('sugarss');
 var precss        = require('precss');
 var sorting       = require('postcss-sorting');
+var easings       = require('postcss-easings');
 var cssnext       = require('postcss-cssnext');
 var short         = require('postcss-short');
 var svginline     = require('postcss-inline-svg');
@@ -61,13 +62,11 @@ var processors = [
     precss(),
     short(),
     colorFunction(),
+    easings(),
     assets( {loadPaths: ['./src/images'], relative: true } ),
     svginline(),
     autoprefixer({browsers: ['last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']}),
-    sorting(),
-    // mqpacker(),
-    pixrem(),
-    //cssnano(),
+    sorting()
 ];
 
 gulp.task('postcss', function() {

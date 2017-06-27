@@ -3,14 +3,14 @@
 
 .mobile-navi
   position: fixed
-  right: 1em
-  bottom: 1em
+  right: 25px
+  bottom: 25px
   z-index: 9
   @media($tablet-from)
     display: none
 
   &__wrap
-    border: 2px solid white
+    border: 1px solid white
     width: 3.5em
     height: 3.5em
     position: relative
@@ -19,12 +19,12 @@
     transition: background .3s ease
     box-shadow: 0 0 4px rgba(0,0,0,.4)
     &:hover
-      background: color(white a(20%))
+      background: color(white a(10%))
       .hamburger
         opacity: 0.9
 
 .hamburger
-  padding: 8px 15px 8px 5px
+  padding: 11px 15px 8px 9px
   display: inline-block
   cursor: pointer
   transition-property: opacity, filter
@@ -49,8 +49,8 @@
   display: block
   top: 50%
   margin-top: -2px
-  width: 40px
-  height: 4px
+  width: 35px
+  height: 3px
   background-color: white
   border-radius: 4px
   position: absolute
@@ -59,8 +59,8 @@
   transition-timing-function: ease
   box-shadow: 0 0 4px rgba(0,0,0,.4)
   &::before, &::after
-    width: 40px
-    height: 4px
+    width: 35px
+    height: 3px
     background-color: white
     border-radius: 4px
     position: absolute

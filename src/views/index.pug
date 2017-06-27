@@ -3,463 +3,388 @@ html
   include shared/head.pug
 
   body
+    // Mobile hamburger
+    .mobile-navi
+      .mobile-navi__wrap
+        button.hamburger.hamburger--spin(type="button")
+          span.hamburger-box
+          span.hamburger-inner
 
-    .h100
-      // Mobile hamburger
-      .mobile-navi
-        .mobile-navi__wrap
-          button.hamburger.hamburger--spin(type="button")
-            span.hamburger-box
-            span.hamburger-inner
-
-      //SIDEBAR::START
-      section.sidebar
-        .sidebar__wrapper
-          //.sidebar__image.rounded
-            img(src="https://spb.hh.ru/photo/473026051.jpeg?t=1482355985&h=kuztcNaQepX-VJO52qpGvQ").img-responsive
-          .sidebar__name SK
-          .sidebar__navigation
-            a(href="#sectionAbout" lang="en") About
-            a(href="#sectionPortfolio" lang="en") Projects
-            // a(href="#sectionCalculator" lang="en") Prices
-            a(href="#sectionContact" lang="en") Contact
-          .sidebar__socials
-            a.tooltip(href="skype:khmelevskoysergey?chat" target="_blank")
-              i.icon-skype
-              .tooltip__wrapper
-                .tooltip__inner
-                  span skype
-            a.tooltip(href="http://telegram.me/khmelevskoy_s" target="_blank")
-              i.icon-telegram
-              .tooltip__wrapper
-                .tooltip__inner
-                  span telegram
-            a.tooltip(href="https://www.behance.net/mangodigital" target="_blank")
-              i.icon-behance2
-              .tooltip__wrapper
-                .tooltip__inner
-                  span behance
-            a.tooltip(href="https://github.com/dpmango" target="_blank")
-              i.icon-github
-              .tooltip__wrapper
-                .tooltip__inner
-                  span github
-          //.sidebar__lang.en
-            a.tooltip.tooltip--language(href="#")
-              i.icon.icon-language
-              .tooltip__wrapper
-                .tooltip__inner
-                  span(lang="en") Сменить язык
-      //CONTENT::START
-      section.content
-        // HERO
-        .hero
-          .hero__wrapper
-            .hero__left
-              .hero__name(lang="en") Sergey Khmelevskoy
-              .hero__title(lang="en") UI/UX Designer <br> <span>front-end Developer<span>
-              .hero__buttons
-                a.btn.btn--hero(href="#sectionPortfolio" lang="en") Portfolio
-            .hero__right
-              .hero__avatar
-                img(src='images/avatar.jpg')
-                    
-        // About
-        .about#sectionAbout
-          .heading.parallax__heading
-            .heading__back(lang="en") all about web
-            .heading__front(lang="en") About
-          .technologies
-            .technologies__item.tooltip
-              i.ico.ico-html
-              .tooltip__wrapper
-                .tooltip__inner
-                  span HTML
-            .technologies__item.tooltip
-              i.ico.ico-css
-              .tooltip__wrapper
-                .tooltip__inner
-                  span CSS
-            .technologies__item.tooltip
-              i.ico.ico-javascript
-              .tooltip__wrapper
-                .tooltip__inner
-                  span JavaScript
-            .technologies__item.tooltip
-              i.ico.ico-postcss
-              .tooltip__wrapper
-                .tooltip__inner
-                  span PostCss
-            .technologies__item.tooltip
-              i.ico.ico-sass
-              .tooltip__wrapper
-                .tooltip__inner
-                  span SASS
-            .technologies__item.tooltip
-              i.ico.ico-jquery
-              .tooltip__wrapper
-                .tooltip__inner
-                  span jQuery
-            .technologies__item.tooltip
-              i.ico.ico-git
-              .tooltip__wrapper
-                .tooltip__inner
-                  span Git
-            .technologies__item.tooltip
-              i.ico.ico-pug
-              .tooltip__wrapper
-                .tooltip__inner
-                  span Pug (Jade)
-            .technologies__item.tooltip
-              i.ico.ico-react
-              .tooltip__wrapper
-                .tooltip__inner
-                  span React.js
-            .technologies__item.tooltip
-              i.ico.ico-rails
-              .tooltip__wrapper
-                .tooltip__inner
-                  span Ruby on Rails
-          // visuals
-          .technologies
-            .technologies__item.tooltip
-              i.ico.ico-sketch
-              .tooltip__wrapper
-                .tooltip__inner
-                  span Sketch App
-            .technologies__item.tooltip
-              i.ico.ico-ps
-              .tooltip__wrapper
-                .tooltip__inner
-                  span Photoshop
-            .technologies__item.tooltip
-              i.ico.ico-illustator
-              .tooltip__wrapper
-                .tooltip__inner
-                  span Illustator
-            .technologies__item.tooltip
-              i.ico.ico-xd
-              .tooltip__wrapper
-                .tooltip__inner
-                  span Adobe Xd
-          .about__text
-            .about__text__paragraph
-              .about__text__heading(lang="en") Who am I ?
-              .about__text__words(lang="en") My name is Sergey. I'm UI/UX design and front-end development entrepreneur with 4 years of full-time experience under the belt. Originally from Moscow, Russia. Currently living in Vuokatti, Finland
-            .about__text__paragraph
-              .about__text__heading(lang="en") What I do ?
-              .about__text__words(lang="en") I specialize in user-centered interaction design and responsive web. My goal is to help SME's and startups grow with a use of cutting-edge technologies and best practices. 
-
-        // Portfolio
-        .portfolio#sectionPortfolio
-          .heading.heading--portfolio
-            .heading__back(lang="en") Stuff I do
-            .heading__front(lang="en") Portfolio
-          ul.portfolio__navi
-            li.portfolio__navi__link.active(data-filter="all")
-              a(href="#" lang="en") All
-            li.portfolio__navi__link(data-filter="code")
-              a(href="#" lang="en") Code
-            li.portfolio__navi__link(data-filter="design")
-              a(href="#" lang="en") Design
-            li.portfolio__navi__link.portfolio__navi__link--language(data-filter-lang="en")
-              a(href="#" lang="en")
-                i.ico.ico-en
-                span EN
+    //SIDEBAR::START
+    .sidebar
+      .sidebar__wrapper
+        .sidebar__logo
+          i.ico.ico-logo
+        .sidebar__navigation
+          a(href="#sectionAbout") 
+            span About
+          a(href="#sectionPortfolio") 
+            span Portfolio
+          a(href="#sectionContact") 
+            span Contact
+        .sidebar__socials
+          a.tooltip(href="skype:khmelevskoysergey?chat" target="_blank")
+            i.icon-skype
+            .tooltip__wrapper
+              .tooltip__inner
+                span skype
+          a.tooltip(href="http://telegram.me/khmelevskoy_s" target="_blank")
+            i.icon-telegram
+            .tooltip__wrapper
+              .tooltip__inner
+                span telegram
+          a.tooltip(href="https://www.behance.net/mangodigital" target="_blank")
+            i.icon-behance2
+            .tooltip__wrapper
+              .tooltip__inner
+                span behance
+          a.tooltip(href="https://github.com/dpmango" target="_blank")
+            i.icon-github
+            .tooltip__wrapper
+              .tooltip__inner
+                span github
     
-          .portfolio__list
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/excellance.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Excellance 
-                .portfolio__item__short Sketch to html e-commerce project for the premium cosmetics brand.
-                a.portfolio__item__link(href="http://dpmango.github.io/excellance/src/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="all" data-language="en")
-              img(src="images/portfolio/locumrocket.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name LocumRocket 
-                .portfolio__item__short Prototyping, Design and front-end development for startup for freelance clinical work
-                a.portfolio__item__link(href="http://locumrocket.com" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-en 
-            .portfolio__item(data-category="all" data-language="en")
-              img(src="images/portfolio/simplyswitch.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name SimplySwitch 
-                .portfolio__item__short Redesign project for sales funnel. The prototype is interactive (click steps to process)
-                a.portfolio__item__link(href="http://dpmango.github.io/simplyswitch/src/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-en 
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/tattoo.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Tattoo Mania
-                .portfolio__item__short Frontend development from .sketch files for Moscow-based Tattoo saloon with 20yrs history
-                a.portfolio__item__link(href="http://dpmango.github.io/tattoo/src/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="all" data-language="en")
-              img(src="images/portfolio/laso.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Laso Health
-                .portfolio__item__short Design and development - homepage + search results. Project is in process
-                a.portfolio__item__link(href="http://dpmango.github.io/lasohealth/src/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-en
-                            
-            .portfolio__item(data-category="code" data-language="en")
-              img(src="images/portfolio/messly.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Messly
-                .portfolio__item__short Landing pages developement for the UK-based marketplace platform that connects doctors with staffing managers
-                a.portfolio__item__link(href="https://www.mlocum.co.uk/doctors/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-en
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/rocketbee.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Rocket Bee
-                .portfolio__item__short Sketch to html Front-end development
-                a.portfolio__item__link(href="https://dpmango.github.io/rocketbee/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="code" data-language="en")
-              img(src="images/portfolio/mpa.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Matt Porter Supplements
-                .portfolio__item__short Landing page front-end development
-                a.portfolio__item__link(href="http://dpmango.github.io/mpa" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-en
-            .portfolio__item(data-category="all" data-language="en")
-              img(src="images/portfolio/bitfire.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name BitFire
-                .portfolio__item__short Landing page Design and developemnt for the cloud mining platform 
-                a.portfolio__item__link(href="https://dpmango.github.io/bitfire/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-en
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/sole.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Sole fitness
-                .portfolio__item__short E-commerce project. Front-end development from .sketch assets
-                a.portfolio__item__link(href="http://dpmango.github.io/sole" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/mebius.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Mebius - city quests
-                .portfolio__item__short Front-end developement
-                a.portfolio__item__link(href="http://dpmango.github.io/mebius" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="code" data-language="en")
-              img(src="images/portfolio/cinc.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name CINC Landing
-                .portfolio__item__short ROI Calculator tool for the landing page with fancy animations
-                a.portfolio__item__link(href="http://go.commissionsinc.com/calculate-your-profit" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-en
-            .portfolio__item(data-category="code" data-language="en")
-              img(src="images/portfolio/chat.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Chat app prototype
-                .portfolio__item__short "Slack like" chat interactive prototype
-                a.portfolio__item__link(href="https://dpmango.github.io/footprint-chat/dist/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-en
-            .portfolio__item(data-category="all" data-language="ru")
-              img(src="images/portfolio/polis.png").img-responsive.logo-portfolio
-              .portfolio__item__desc
-                .portfolio__item__name POLIS812
-                .portfolio__item__short Online insurance and tour operator website redesign
-                a.portfolio__item__link(href="https://polis812.ru/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/crm.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name CRM
-                .portfolio__item__short Nice and simple CRM base on material framework
-                a.portfolio__item__link(href="http://dpmango.github.io/crm/dist/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="code" data-language="en")
-              img(src="images/portfolio/essay.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Roowrite
-                .portfolio__item__short Extended landing page type of site with order features and A/B testing
-                a.portfolio__item__link(href="http://f-end.ru/demo/0716-roowrite/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-en
-            .portfolio__item(data-category="design" data-language="ru")
-              img(src="images/portfolio/zerno.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Zerno market
-                .portfolio__item__short Marketpalce web-app design
-                a.portfolio__item__link(href="https://www.behance.net/gallery/46973381/Web-app-design-Zernomarket" target="_blank")
-                  span(lang="en") Check on behance
-                  i.icon-behance2
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="code" data-language="en")
-              img(src="images/portfolio/brightkite.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name BrightKite
-                .portfolio__item__short Psd to html together with an erb templates integration on Ruby on Rails
-                a.portfolio__item__link(href="https://brightkite.com" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-en
-            .portfolio__item(data-category="all" data-language="ru")
-              img(src="images/portfolio/ats.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name ATS Group
-                .portfolio__item__short Site from scratch for stainless steel trading company
-                a.portfolio__item__link(href="http://ats77.ru/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-link-external
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="design" data-language="ru")
-              img(src="images/portfolio/naty.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Naty
-                .portfolio__item__short E-commerce website design
-                a.portfolio__item__link(href="https://www.behance.net/gallery/46894267/Naty-E-commerce-webdesign" target="_blank")
-                  span(lang="en") Check on behance
-                  i.icon-behance2
-                .portfolio__item__lang
-                  i.ico.ico-ru
-            .portfolio__item(data-category="code" data-language="ru")
-              img(src="images/portfolio/doctor.png").img-responsive
-              .portfolio__item__desc
-                .portfolio__item__name Doctor Frank
-                .portfolio__item__short Corporate site for a chain of medical clinics in Moscow
-                a.portfolio__item__link(href="http://dpmango.github.io/doctor-frank/dist/" target="_blank")
-                  span(lang="en") Check live
-                  i.icon-github
-                .portfolio__item__lang
-                  i.ico.ico-ru
-        // Calculator
-        // .calculator#sectionCalculator
-          .heading.heading--calculator
-            .heading__back(lang="en") Estimate project
-            .heading__front(lang="en") Online cost estimator
-          //.calculator__short If you have an intersting project, you can estimate the costs
+    //CONTENT::START
+    .content
+      // HERO
+      .hero
+        // parallax elements
+        .js-scene(data-invert-y="false")
+          .layer(data-depth=".3")
+            .hero__el.hero__el--triangle
+          .layer(data-depth="0.15")
+            .hero__el.hero__el--square.hero__el--square--second
+          .layer(data-depth="0.05")
+            .hero__el.hero__el--square2
+          .layer(data-depth="0.07")
+            .hero__el.hero__el--circle
+          .layer(data-depth="0.10")
+            .hero__el.hero__el--polygon
+          .layer(data-depth="0.05")
+            .hero__el.hero__el--square
+          .layer(data-depth="0.05")
+            .hero__el.hero__el--square2.hero__el--square2--second
+          .layer(data-depth="0.03")
+            .hero__el.hero__el--triangle.hero__el.hero__el--triangle--second
+          .layer(data-depth="0.07")
+            .hero__el.hero__el--circle.hero__el--circle--second
+          .layer(data-depth="0.03")
+            .hero__el.hero__el--triangle.hero__el.hero__el--triangle--third        
+          .layer(data-depth="0.25")
+            .hero__el.hero__el--circle.hero__el--circle--third
+          .layer(data-depth="0.05")
+            .hero__el.hero__el--square.hero__el--square--third
+          .layer(data-depth="0.15")
+            .hero__el.hero__el--polygon.hero__el--polygon--second
+                          
+        .hero__wrapper
+          .hero__left
+            .hero__name() Khmelevskoy Sergey
+            .hero__title() UI/UX Designer <br> <span>front-end Developer<span>
+            .hero__buttons
+              a.btn.btn--hero(href="#sectionPortfolio") Portfolio
+          .hero__right
+            .hero__avatar
+              img(src='images/avatar.jpg')
+                  
+      // About
+      .about#sectionAbout
+        .heading.parallax__heading
+          .heading__back() all about web
+          .heading__front() About
+        .technologies
+          .technologies__item.tooltip
+            i.ico.ico-html
+            .tooltip__wrapper
+              .tooltip__inner
+                span HTML
+          .technologies__item.tooltip
+            i.ico.ico-css
+            .tooltip__wrapper
+              .tooltip__inner
+                span CSS
+          .technologies__item.tooltip
+            i.ico.ico-javascript
+            .tooltip__wrapper
+              .tooltip__inner
+                span JavaScript
+          .technologies__item.tooltip
+            i.ico.ico-postcss
+            .tooltip__wrapper
+              .tooltip__inner
+                span PostCss
+          .technologies__item.tooltip
+            i.ico.ico-sass
+            .tooltip__wrapper
+              .tooltip__inner
+                span SASS
+          .technologies__item.tooltip
+            i.ico.ico-jquery
+            .tooltip__wrapper
+              .tooltip__inner
+                span jQuery
+          .technologies__item.tooltip
+            i.ico.ico-git
+            .tooltip__wrapper
+              .tooltip__inner
+                span Git
+          .technologies__item.tooltip
+            i.ico.ico-pug
+            .tooltip__wrapper
+              .tooltip__inner
+                span Pug (Jade)
+          .technologies__item.tooltip
+            i.ico.ico-react
+            .tooltip__wrapper
+              .tooltip__inner
+                span React.js
+          .technologies__item.tooltip
+            i.ico.ico-rails
+            .tooltip__wrapper
+              .tooltip__inner
+                span Ruby on Rails
+        // visuals
+        .technologies
+          .technologies__item.tooltip
+            i.ico.ico-sketch
+            .tooltip__wrapper
+              .tooltip__inner
+                span Sketch App
+          .technologies__item.tooltip
+            i.ico.ico-ps
+            .tooltip__wrapper
+              .tooltip__inner
+                span Photoshop
+          .technologies__item.tooltip
+            i.ico.ico-illustator
+            .tooltip__wrapper
+              .tooltip__inner
+                span Illustator
+          .technologies__item.tooltip
+            i.ico.ico-xd
+            .tooltip__wrapper
+              .tooltip__inner
+                span Adobe Xd
+        .about__text
+          .about__text__paragraph
+            .about__text__heading() Who am I ?
+            .about__text__words() My name is Sergey. I'm UI/UX design and front-end development entrepreneur with 4 years of full-time experience under the belt. Originally from Moscow, Russia. Currently living in Vuokatti, Finland
+          .about__text__paragraph
+            .about__text__heading() What I do ?
+            .about__text__words() I specialize in user-centered interaction design and responsive web. My goal is to help SME's and startups grow with a use of cutting-edge technologies and best practices. 
 
-          form.calculator__form
-            .calculator__form__group.calculator__form__group--forStep1.is-active
-              .calculator__form__heading
-                .calculator__form__heading__num 1
-                span(lang="en") What type of services ?
-              .ac-custom.ac-checkbox.ac-checkmark.ac--four-items(autocomplete="off")
-                ul
-                  li
-                    input#stage1(name="stage" type="checkbox")
-                    label(for="stage1" lang="en") Ideas / Prototyping
-                  li
-                    input#stage2(name="stage" type="checkbox")
-                    label(for="stage2" lang="en") UI/UX Design
-                  li
-                    input#stage3(name="stage" type="checkbox")
-                    label(for="stage3" lang="en") Front-end development
+      // Portfolio
+      .portfolio#sectionPortfolio
+        .heading.heading--portfolio
+          .heading__back() Stuff I do
+          .heading__front() Portfolio
+        ul.portfolio__navi
+          li.portfolio__navi__link.active(data-filter="all")
+            a(href="#") All
+          li.portfolio__navi__link(data-filter="design")
+            a(href="#") Design
+          li.portfolio__navi__link(data-filter="code")
+            a(href="#") Code
+          li.portfolio__navi__link.portfolio__navi__link--language(data-filter-)
+            a(href="#")
+              i.ico.ico-en
+              span EN
+  
+        .portfolio__list
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/draw.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Draw&Go 
+              .portfolio__item__short Sketch to html project (currently developing)
+              a.portfolio__item__link(href="http://dpmango.github.io/draw/src/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="all" data-language="en")
+            img(src="images/portfolio/locumrocket.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name LocumRocket 
+              .portfolio__item__short Prototyping, Design and front-end development for startup for freelance clinical work
+              a.portfolio__item__link(href="http://locumrocket.com" target="_blank")
+                span() Check live
+                i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-en 
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/excellance.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Excellance 
+              .portfolio__item__short Sketch to html e-commerce project for the premium cosmetics brand.
+              a.portfolio__item__link(href="http://dpmango.github.io/excellance/src/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="all" data-language="en")
+            img(src="images/portfolio/simplyswitch.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name SimplySwitch 
+              .portfolio__item__short Redesign project for sales funnel. The prototype is interactive (click steps to process)
+              a.portfolio__item__link(href="http://dpmango.github.io/simplyswitch/src/" target="_blank")
+                span() Check live
+                i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-en 
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/tattoo.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Tattoo Mania
+              .portfolio__item__short Frontend development from .sketch files for Moscow-based Tattoo saloon with 20yrs history
+              a.portfolio__item__link(href="http://dpmango.github.io/tattoo/src/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="all" data-language="en")
+            img(src="images/portfolio/laso.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Laso Health
+              .portfolio__item__short Design and development - homepage + search results. Project is in process
+              a.portfolio__item__link(href="http://dpmango.github.io/lasohealth/src/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/rocketbee.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Rocket Bee
+              .portfolio__item__short Sketch to html Front-end development
+              a.portfolio__item__link(href="https://dpmango.github.io/rocketbee/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="en")
+            img(src="images/portfolio/mpa.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Matt Porter Supplements
+              .portfolio__item__short Landing page front-end development
+              a.portfolio__item__link(href="http://dpmango.github.io/mpa" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en
+          .portfolio__item(data-category="all" data-language="en")
+            img(src="images/portfolio/bitfire.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name BitFire
+              .portfolio__item__short Landing page Design and developemnt for the cloud mining platform 
+              a.portfolio__item__link(href="https://dpmango.github.io/bitfire/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/sole.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Sole fitness
+              .portfolio__item__short E-commerce project. Front-end development from .sketch assets
+              a.portfolio__item__link(href="http://dpmango.github.io/sole" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/mebius.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Mebius - city quests
+              .portfolio__item__short Front-end developement
+              a.portfolio__item__link(href="http://dpmango.github.io/mebius" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="en")
+            img(src="images/portfolio/chat.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Chat app prototype
+              .portfolio__item__short "Slack like" chat interactive prototype
+              a.portfolio__item__link(href="https://dpmango.github.io/footprint-chat/dist/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en
+          .portfolio__item(data-category="all" data-language="ru")
+            img(src="images/portfolio/polis.png").img-responsive.logo-portfolio
+            .portfolio__item__desc
+              .portfolio__item__name POLIS812
+              .portfolio__item__short Online insurance and tour operator website redesign
+              a.portfolio__item__link(href="https://polis812.ru/" target="_blank")
+                span() Check live
+                i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="en")
+            img(src="images/portfolio/messly.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Messly
+              .portfolio__item__short Landing pages developement for the UK-based marketplace platform that connects doctors with staffing managers
+              a.portfolio__item__link(href="https://www.mlocum.co.uk/doctors/" target="_blank")
+                span() Check live
+                i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-en
+          .portfolio__item(data-category="design" data-language="ru")
+            img(src="images/portfolio/zerno.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Zerno market
+              .portfolio__item__short Marketpalce web-app design
+              a.portfolio__item__link(href="https://www.behance.net/gallery/46973381/Web-app-design-Zernomarket" target="_blank")
+                span() Check on behance
+                i.icon-behance2
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="en")
+            img(src="images/portfolio/brightkite.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name BrightKite
+              .portfolio__item__short Psd to html together with an erb templates integration on Ruby on Rails
+              a.portfolio__item__link(href="https://brightkite.com" target="_blank")
+                span() Check live
+                i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-en
+          .portfolio__item(data-category="all" data-language="ru")
+            img(src="images/portfolio/ats.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name ATS Group
+              .portfolio__item__short Site from scratch for stainless steel trading company
+              a.portfolio__item__link(href="http://ats77.ru/" target="_blank")
+                span() Check live
+                i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="design" data-language="ru")
+            img(src="images/portfolio/naty.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Naty
+              .portfolio__item__short E-commerce website design
+              a.portfolio__item__link(href="https://www.behance.net/gallery/46894267/Naty-E-commerce-webdesign" target="_blank")
+                span() Check on behance
+                i.icon-behance2
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/doctor.png").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Doctor Frank
+              .portfolio__item__short Corporate site for a chain of medical clinics in Moscow
+              a.portfolio__item__link(href="http://dpmango.github.io/doctor-frank/dist/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
 
-            .calculator__form__group.calculator__form__group--forStep2
-              .calculator__form__heading
-                .calculator__form__heading__num 2
-                span(lang="en") What kind of the project ?
-              .ac-custom.ac-radio.ac-fill.ac--four-items(autocomplete="off")
-                ul
-                  li
-                    input#projectType1(name="projectType" type="radio")
-                    label(for="projectType1" lang="en") Corporate
-                  li
-                    input#projectType2(name="projectType" type="radio")
-                    label(for="projectType2" lang="en") Landing
-                  li
-                    input#projectType3(name="projectType" type="radio")
-                    label(for="projectType3" lang="en") E-commerce
-                  li
-                    input#projectType4(name="projectType" type="radio")
-                    label(for="projectType4" lang="en") Web-app
-
-            .calculator__form__group.calculator__form__group--forStep3
-              .calculator__form__heading
-                .calculator__form__heading__num 3
-                span(lang="en") How many pages have ?
-              .calculator__form__range
-                input(type="range" id="calcPages" min="1" max="21" value="5")
-                span.rangeslider__tooltip#range-tooltip
-
-            .calculator__form__group.calculator__form__group--forStep4
-              .calculator__form__heading
-                .calculator__form__heading__num 4
-                span(lang="en") What kind of features ?
-              .ac-custom.ac-checkbox.ac-checkmark.ac--four-items(autocomplete="off")
-                ul
-                  li.featureFirst
-                    input#features1(name="features" type="checkbox")
-                    label(for="features1" lang="en") Responsive
-                  li.featureSecond
-                    input#features2(name="features" type="checkbox")
-                    label(for="features2" lang="en") React.js based
-                  li.featureThird
-                    input#features3(name="features" type="checkbox")
-                    label(for="features3" lang="en") MODX admin
-                  li.featureForth
-                    input#features4(name="features" type="checkbox")
-                    label(for="features4" lang="en") Complex javascript UI
-                  li.featureFifth
-                    input#features5(name="features" type="checkbox")
-                    label(for="features5" lang="en") Mobile first design
-
-            .calculator__form__price
-              hr
-              .calculator__form__price__heading(lang="en") This project is about
-              .calculator__form__price__result(lang="en") <span>0</span> h
-              .calculator__form__price__base(lang="en") (32$/h)
-
-        // Contact
-        .contact#sectionContact
+      // Contact
+      .contact#sectionContact
+        .contact__top
           <svg viewBox="0 0 3387 1270">
             <path id="planePath" class="planePath" d="M-226 626c439,4 636,-213 934,-225 755,-31 602,769 1334,658 562,-86 668,-698 266,-908 -401,-210 -893,189 -632,630 260,441 747,121 1051,91 360,-36 889,179 889,179" />
             <g id="plane">
@@ -475,55 +400,44 @@ html
           </svg>
 
           .heading.heading--contact
-            .heading__back(lang="en") Drop me a line
-            //- .heading__front Contact
-
-          .contact__wrapper
-
-            // form.contact__form(action="contact.php" method="POST")
-              .contact__form__field.contact__form__field--first.active
-                textarea.autoExpand(rows='4' data-min-rows='4' name="message" placeholder="Write about any projects or thoughts here ..." lang="en")
-                .contact__form__textarea-validation(lang="en") Hey! Please type an message (min. 10 symbols)
-
-              .contact__form__field.contact__form__field--second
-                span.input.input--kuro
-                  input.input__field.input__field--kuro(type="email" name="email" id="input-16")
-                  label.input__label.input__label--kuro(for="input-16")
-                    span.input__label-content.input__label-content--kuro(lang="en") Your email
-
-              .contact__form__field
-                a.contact__form__back(href="#" lang="en") back
-                button.btn.btn--contact.validateTextarea(type="submit" lang="en") NEXT
-
-            .contact__direct
-              a.contact__direct__item(href="skype:khmelevskoysergey?chat" target="_blank")
-                i.icon.icon-skype
-                span khmelevskoysergey
-              a.contact__direct__item(href="http://telegram.me/khmelevskoy_s" target="_blank")
-                i.icon.icon-telegram
-                span khmelevskoy_s
-              a.contact__direct__item(href="mailto:sergey@f-end.ru" target="_blank")
-                i.icon.icon-mail4
-                span sergey@f-end.ru
-              a.contact__direct__item(href="tel:+358466461777" target="_blank")
-                i.icon.icon-phone-square
-                span(lang="en") +358 (46) 6461777
+            .heading__back() Drop me a line
+          
+        .contact__wrapper
+          .contact__direct
+            a.contact__direct__item(href="skype:khmelevskoysergey?chat" target="_blank")
+              i.icon.icon-skype
+              span khmelevskoysergey
+            a.contact__direct__item(href="http://telegram.me/khmelevskoy_s" target="_blank")
+              i.icon.icon-telegram
+              span khmelevskoy_s
+            a.contact__direct__item(href="mailto:sergey@f-end.ru" target="_blank")
+              i.icon.icon-mail4
+              span sergey@f-end.ru
+            a.contact__direct__item(href="tel:+358466461777" target="_blank")
+              i.icon.icon-phone-square
+              span() +358 (46) 6461777
 
 
 
-        // Footer
-        .footer
-          .footer__copy
-            | © Sergey Khmelevskoy. <span>2.2.0</span>
-          .footer__credentials
-            | Currently availalbe
-        
-        // Banner
-        a(href='https://www.upwork.com/fl/sergeykhmelevskoy' target='_blank').banner
-          i.ico.ico-upwork
-          span TOP RATED
+      // Footer
+      .footer
+        .footer__copy
+          | © Sergey Khmelevskoy. <span>2.3.0</span>
+        .footer__credentials
+          i.ico.ico-available
+          | Currently availalbe
+      
+      // Banner
+      a(href='https://www.upwork.com/fl/sergeykhmelevskoy' target='_blank').banner
+        i.ico.ico-upwork
+        span TOP RATED
               
 
+    //build:js js/main.min.js
+    script(src="/js/lib/jquery-3.1.1.min.js")
+    script(src="/js/lib/parallax.min.js")
+    script(src="/js/main.js")
+    //endbuild
 
     // Yandex.Metrika counter
     script(type='text/javascript').

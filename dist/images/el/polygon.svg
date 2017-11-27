@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="48px" viewBox="0 0 47 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>polygon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="839.265848 229.497554 858.265848 243.301862 851.008494 265.637701 827.523202 265.637701 820.265848 243.301862"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-935.000000, -280.000000)">
+            <g id="hero">
+                <g id="things" transform="translate(118.000000, 55.000000)">
+                    <g id="polygon" transform="translate(839.265848, 247.567627) rotate(15.000000) translate(-839.265848, -247.567627) ">
+                        <use fill="#79BDE1" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <path stroke-opacity="0.3" stroke="#79BDE1" stroke-width="4" d="M839.265848,227.025418 L860.616989,242.53793 L852.461579,267.637701 L826.070117,267.637701 L817.914707,242.53793 L839.265848,227.025418 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -39,6 +39,7 @@ gulp.task('watch', function(){
   //gulp.watch('./src/sass/*.+(scss|sass)', ['sass']);
   gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
   gulp.watch('./src/views/**/*.pug', ['pug']);
+  gulp.watch('./src/images/**/*.+(png|jpg|gif|svg)', ['images']);
   gulp.watch('./src/*.html', browserSync.reload);
   gulp.watch('./src/js/**/*.js', browserSync.reload);
 })
@@ -49,6 +50,7 @@ gulp.task('build', function (callback) {
     'clean:dist',
     'pug',
     'postcss',
+    'images',
     ['useref', 'fonts'],
     callback
   )
@@ -118,9 +120,9 @@ gulp.task('useref', function(){
 
 gulp.task('images', function(){
   return gulp.src('./src/images/**/*.+(png|jpg|gif|svg)')
-  .pipe(cache(imagemin({
-      interlaced: true
-    })))
+  // .pipe(cache(imagemin({
+  //     interlaced: true
+  //   })))
   .pipe(gulp.dest('dist/images'))
 });
 

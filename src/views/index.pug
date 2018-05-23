@@ -12,7 +12,7 @@ html
 
     //SIDEBAR::START
     .sidebar
-      .sidebar__wrapper
+      .sidebar__wrapper(js-scrollbar)
         .sidebar__logo
           i.ico.ico-logo
         .sidebar__navigation
@@ -193,54 +193,108 @@ html
             a(href="#")
               i.ico.ico-en
               span EN
-  
+
         .portfolio__list
+          .portfolio__item(data-category="code" data-language="en")
+            img(src="images/portfolio/cosound.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Cosound
+              .portfolio__item__short Front-end development of music industry network startup and ITO landing. Include works with HTML5 video/audio API
+              a.portfolio__item__link(href="http://cosound.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en
           .portfolio__item(data-category="code" data-language="ru")
             img(src="images/portfolio/visions.jpg").img-responsive
             .portfolio__item__desc
               .portfolio__item__name Hd-visions
               .portfolio__item__short Infinite multidirectional grid on canvas and React.js. Rails backend API development. Non-commercial project of Authentica
-              a.portfolio__item__link(href="https://hd-visions.surge.sh/grid" target="_blank")
+              a.portfolio__item__link(href="http://hd-visions.ru" target="_blank")
                 span() Check live
                 i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/abank.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Alfa-bank
+              .portfolio__item__short Landing page front-end development for TOP 5 bank in Russia.
+              a.portfolio__item__link(href="http://abank-vc.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/nmh.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name New moscow house
+              .portfolio__item__short Front-end development of real estate agency site. Lot's of jQuery plugins, smooth transitions, and styled print version
+              a.portfolio__item__link(href="http://abank-vc.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          
+          // next 4
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/mice.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Mice&More
+              .portfolio__item__short Figma to html. Urgent timings (6 days turnaround). The homepage was picked up from another developer and fixed
+              a.portfolio__item__link(href="http://mice.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru    
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/sarex.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Sarex
+              .portfolio__item__short Landing page front-end development with scroll navigation listener
+              a.portfolio__item__link(href="http://sarex.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/tokio.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Tokio sushi
+              .portfolio__item__short Figma to html - restaurant wine card menu guide. Development to be used on in-house tablets
+              a.portfolio__item__link(href="http://tokio-ipad.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-github
               .portfolio__item__lang
                 i.ico.ico-ru
           .portfolio__item(data-category="code" data-language="en")
             img(src="images/portfolio/sancom.jpg").img-responsive
             .portfolio__item__desc
               .portfolio__item__name SANCOM
-              .portfolio__item__short Sketch to html with parallax animations. Awarded with Special Kudos on CSSDA. Designed and developed by PINKMAN
+              .portfolio__item__short Sketch to html with parallax animations. Awarded with Special Kudos on CSSDA. Designed by PINKMAN
               a.portfolio__item__link(href="https://sancom.co" target="_blank")
                 span() Check live
                 i.icon-link-external
               .portfolio__item__lang
                 i.ico.ico-en
+          
+          // next 4
           .portfolio__item(data-category="code" data-language="ru")
-            img(src="images/portfolio/coffee.jpg").img-responsive
+            img(src="images/portfolio/fruto.jpg").img-responsive
             .portfolio__item__desc
-              .portfolio__item__name Laboratoria coffee
-              .portfolio__item__short Sketch to html corporate landing with fullpage section scroll and animations
-              a.portfolio__item__link(href="http://coffee-lab.surge.sh/" target="_blank")
+              .portfolio__item__name Fruto
+              .portfolio__item__short Developed for integration with mom.life mobile app. "Fruto nanny" is a leading manufacturer of baby food on the Russian market
+              a.portfolio__item__link(href="http://fruto.surge.sh/" target="_blank")
                 span() Check live
-                i.icon-link-external
+                i.icon-github
               .portfolio__item__lang
-                i.ico.ico-ru
-          .portfolio__item(data-category="code" data-language="en")
-            img(src="images/portfolio/relonch.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name relonch
-              .portfolio__item__short Mobile-only product landing with API integrations for instagramm promo compaign
-              a.portfolio__item__link(href="http://relonch.surge.sh" target="_blank")
-                span() Check live
-                i.icon-link-external
-              .portfolio__item__lang
-                i.ico.ico-en
+                i.ico.ico-ru    
           .portfolio__item(data-category="code" data-language="ru")
-            img(src="images/portfolio/draw.jpg").img-responsive
+            img(src="images/portfolio/avalon.jpg").img-responsive
             .portfolio__item__desc
-              .portfolio__item__name Draw&Go 
-              .portfolio__item__short Sketch to html project for e-learning platform
-              a.portfolio__item__link(href="http://dpmango.github.io/draw/src/" target="_blank")
+              .portfolio__item__name Avalon
+              .portfolio__item__short E-commerce sketch to HTML with a bunch of complex javascript functionality. Potential website ratings nominee. Designed by GLYF
+              a.portfolio__item__link(href="http://avalon2.surge.sh/" target="_blank")
                 span() Check live
                 i.icon-github
               .portfolio__item__lang
@@ -252,9 +306,63 @@ html
               .portfolio__item__short Simple Promo page sketch to html project with fullpage scrolling
               a.portfolio__item__link(href="https://modi-html.surge.sh/" target="_blank")
                 span() Check live
-                i.icon-link-external
+                i.icon-github
               .portfolio__item__lang
                 i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/wander.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Wanderbuild
+              .portfolio__item__short Sketch to HTML with smooth barba.js transitions. Use hamburger menu to navigate across pages
+              a.portfolio__item__link(href="http://wanderbuild.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+            
+          // next 4
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/mashe.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Mashe
+              .portfolio__item__short E-commerce sketch to html. Designed by FlAT12 studio
+              a.portfolio__item__link(href="http://mashe.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/draw.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Draw&Go 
+              .portfolio__item__short Sketch to html project for e-learning platform. Designed by PINKMAN
+              a.portfolio__item__link(href="http://dpmango.github.io/draw/src/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru     
+          .portfolio__item(data-category="code" data-language="en")
+            img(src="images/portfolio/relonch.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name relonch
+              .portfolio__item__short Mobile-only product landing with API integrations for Instagram promo campaign
+              a.portfolio__item__link(href="http://relonch.surge.sh" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en     
+          .portfolio__item(data-category="all" data-language="en")
+            img(src="images/portfolio/simplyswitch.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name SimplySwitch 
+              .portfolio__item__short Redesign project for sales funnel. The prototype is interactive (click steps to process)
+              a.portfolio__item__link(href="http://dpmango.github.io/simplyswitch/src/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en   
+          
+          // next 4
           .portfolio__item(data-category="all" data-language="en")
             img(src="images/portfolio/locumrocket.jpg").img-responsive
             .portfolio__item__desc
@@ -266,6 +374,38 @@ html
               .portfolio__item__lang
                 i.ico.ico-en 
           .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/sole.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Sole fitness
+              .portfolio__item__short E-commerce project. Front-end development from .sketch assets
+              a.portfolio__item__link(href="http://dpmango.github.io/sole" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/tattoo.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Tattoo Mania
+              .portfolio__item__short Frontend development from .sketch files for Moscow-based Tattoo saloon with 20yrs history
+              a.portfolio__item__link(href="https://tattoo.surge.sh" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/rocketbee.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Rocket Bee
+              .portfolio__item__short Sketch to html Front-end development
+              a.portfolio__item__link(href="https://dpmango.github.io/rocketbee/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru    
+          
+          // next 4
+          .portfolio__item(data-category="code" data-language="ru")
             img(src="images/portfolio/excellance.jpg").img-responsive
             .portfolio__item__desc
               .portfolio__item__name Excellance 
@@ -276,33 +416,45 @@ html
               .portfolio__item__lang
                 i.ico.ico-ru
           .portfolio__item(data-category="code" data-language="ru")
-            img(src="images/portfolio/tattoo.jpg").img-responsive
+            img(src="images/portfolio/roof.jpg").img-responsive
             .portfolio__item__desc
-              .portfolio__item__name Tattoo Mania
-              .portfolio__item__short Frontend development from .sketch files for Moscow-based Tattoo saloon with 20yrs history
-              a.portfolio__item__link(href="http://dpmango.github.io/tattoo/src/" target="_blank")
-                span() Check live
-                i.icon-github
-              .portfolio__item__lang
-                i.ico.ico-ru
-          .portfolio__item(data-category="all" data-language="en")
-            img(src="images/portfolio/simplyswitch.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name SimplySwitch 
-              .portfolio__item__short Redesign project for sales funnel. The prototype is interactive (click steps to process)
-              a.portfolio__item__link(href="http://dpmango.github.io/simplyswitch/src/" target="_blank")
+              .portfolio__item__name Roof
+              .portfolio__item__short Corporate site front-end development. Full-page based homepage and nice navigation idea
+              a.portfolio__item__link(href="http://roof.surge.sh/" target="_blank")
                 span() Check live
                 i.icon-link-external
               .portfolio__item__lang
-                i.ico.ico-en 
-          .portfolio__item(data-category="code" data-language="ru")
-            img(src="images/portfolio/rocketbee.jpg").img-responsive
+                i.ico.ico-ru
+          .portfolio__item(data-category="all" data-language="ru")
+            img(src="images/portfolio/polis.jpg").img-responsive.logo-portfolio
             .portfolio__item__desc
-              .portfolio__item__name Rocket Bee
-              .portfolio__item__short Sketch to html Front-end development
-              a.portfolio__item__link(href="https://dpmango.github.io/rocketbee/" target="_blank")
+              .portfolio__item__name POLIS812
+              .portfolio__item__short Online insurance and tour operator website redesign
+              a.portfolio__item__link(href="https://polis812.ru/" target="_blank")
                 span() Check live
-                i.icon-github
+                i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/skvot.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Skvot
+              .portfolio__item__short E-commerce psd to html for a leading board-shops business
+              a.portfolio__item__link(href="http://skvot.surge.sh" target="_blank")
+                span() Check live
+                i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-ru
+          
+          // next 4
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/coffee.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Laboratoria coffee
+              .portfolio__item__short Sketch to html corporate landing with fullpage section scroll and animations
+              a.portfolio__item__link(href="http://coffee-lab.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-link-external
               .portfolio__item__lang
                 i.ico.ico-ru
           .portfolio__item(data-category="all" data-language="en")
@@ -335,66 +487,8 @@ html
                 i.icon-github
               .portfolio__item__lang
                 i.ico.ico-en
-          .portfolio__item(data-category="code" data-language="ru")
-            img(src="images/portfolio/sole.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name Sole fitness
-              .portfolio__item__short E-commerce project. Front-end development from .sketch assets
-              a.portfolio__item__link(href="http://dpmango.github.io/sole" target="_blank")
-                span() Check live
-                i.icon-github
-              .portfolio__item__lang
-                i.ico.ico-ru
-          .portfolio__item(data-category="code" data-language="ru")
-            img(src="images/portfolio/mebius.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name Mebius - city quests
-              .portfolio__item__short Front-end developement
-              a.portfolio__item__link(href="http://dpmango.github.io/mebius" target="_blank")
-                span() Check live
-                i.icon-github
-              .portfolio__item__lang
-                i.ico.ico-ru
-          .portfolio__item(data-category="code" data-language="ru")
-            img(src="images/portfolio/ali.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name AliWorld
-              .portfolio__item__short PSD to html for media project
-              a.portfolio__item__link(href="http://aliworld.surge.sh" target="_blank")
-                span() Check live
-                i.icon-link-external
-              .portfolio__item__lang
-                i.ico.ico-ru
-          .portfolio__item(data-category="code" data-language="en")
-            img(src="images/portfolio/chat.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name Chat app prototype
-              .portfolio__item__short "Slack like" chat interactive prototype
-              a.portfolio__item__link(href="https://dpmango.github.io/footprint-chat/dist/" target="_blank")
-                span() Check live
-                i.icon-github
-              .portfolio__item__lang
-                i.ico.ico-en
-          .portfolio__item(data-category="all" data-language="ru")
-            img(src="images/portfolio/polis.jpg").img-responsive.logo-portfolio
-            .portfolio__item__desc
-              .portfolio__item__name POLIS812
-              .portfolio__item__short Online insurance and tour operator website redesign
-              a.portfolio__item__link(href="https://polis812.ru/" target="_blank")
-                span() Check live
-                i.icon-link-external
-              .portfolio__item__lang
-                i.ico.ico-ru
-          .portfolio__item(data-category="code" data-language="en")
-            img(src="images/portfolio/messly.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name Messly
-              .portfolio__item__short Landing pages developement for the UK-based marketplace platform that connects doctors with staffing managers
-              a.portfolio__item__link(href="https://www.mlocum.co.uk/doctors/" target="_blank")
-                span() Check live
-                i.icon-link-external
-              .portfolio__item__lang
-                i.ico.ico-en
+            
+          // next 4
           .portfolio__item(data-category="design" data-language="ru")
             img(src="images/portfolio/zerno.jpg").img-responsive
             .portfolio__item__desc
@@ -403,6 +497,16 @@ html
               a.portfolio__item__link(href="https://www.behance.net/gallery/46973381/Web-app-design-Zernomarket" target="_blank")
                 span() Check on behance
                 i.icon-behance2
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/itboat.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name ItBoat
+              .portfolio__item__short E-journal platform static front-end develpment
+              a.portfolio__item__link(href="http://itboat-journal.surge.sh/" target="_blank")
+                span() Check live
+                i.icon-link-external
               .portfolio__item__lang
                 i.ico.ico-ru
           .portfolio__item(data-category="code" data-language="en")
@@ -415,6 +519,37 @@ html
                 i.icon-link-external
               .portfolio__item__lang
                 i.ico.ico-en
+          .portfolio__item(data-category="code" data-language="en")
+            img(src="images/portfolio/chat.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Chat app prototype
+              .portfolio__item__short "Slack like" chat interactive prototype
+              a.portfolio__item__link(href="https://dpmango.github.io/footprint-chat/dist/" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/mebius.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Mebius - city quests
+              .portfolio__item__short Front-end developement
+              a.portfolio__item__link(href="http://dpmango.github.io/mebius" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+                  
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/ali.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name AliWorld
+              .portfolio__item__short PSD to html for media project
+              a.portfolio__item__link(href="http://aliworld.surge.sh" target="_blank")
+                span() Check live
+                i.icon-link-external
+              .portfolio__item__lang
+                i.ico.ico-ru        
           .portfolio__item(data-category="all" data-language="ru")
             img(src="images/portfolio/ats.jpg").img-responsive
             .portfolio__item__desc
@@ -509,7 +644,9 @@ html
 
     //build:js js/main.min.js
     script(src="/js/lib/jquery-3.1.1.min.js")
+    script(src="/js/lib/debounce.js")
     script(src="/js/lib/parallax.min.js")
+    script(src="/js/lib/scrollbar.min.js")
     script(src="/js/main.js")
     //endbuild
 

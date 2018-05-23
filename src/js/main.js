@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  var _window = $(window);
+  var _document = $(document);
+
   // hamburger
   $('.mobile-navi').on('click', function(){
     $(this).find('.hamburger').toggleClass('is-active');
@@ -33,7 +36,7 @@ $(document).ready(function(){
   });
 
   // Bind to scroll
-  $(window).scroll(function(){
+  _window.on('scroll', throttle(function(){
     // Get container scroll position
     var fromTop = $(this).scrollTop() + topMenuHeight;
 
@@ -47,8 +50,14 @@ $(document).ready(function(){
     var id = cur && cur.length ? cur[0].id : "";
     // Set/remove active class
     menuItems.removeClass("active").filter("[href='#"+id+"']").addClass("active");
-  });
+  }, 20));
 
+  // scrollbar
+  new PerfectScrollbar('.sidebar__wrapper', {
+    // wheelSpeed: 2,
+    wheelPropagation: true,
+    minScrollbarLength: 20
+  });
 
   // Parallax
   function customParallax(){
@@ -67,7 +76,7 @@ $(document).ready(function(){
       $('.portfolio__item').each(function(i){
         setTimeout(function(){
           $('.portfolio__item').eq(i).addClass('is-showing');
-        }, (700 * (Math.exp(i * 0.1))) - 700);
+        }, (700 * (Math.exp(i * 0.05))) - 700);
       });
     }
 
@@ -83,10 +92,10 @@ $(document).ready(function(){
   calcWidth();
   enableParallax();
 
-  $(window).resize(function() {
+  _window.on('resize', debounce(function() {
     calcWidth();
     enableParallax();
-  });
+  }, 200));
 
   function calcWidth(){
     if ( $(window).width() > 768 ) {
@@ -99,9 +108,9 @@ $(document).ready(function(){
   }
   function enableParallax(){
     if ( desktopDetected  == true ) {
-      $(window).scroll(function() {
+      _window.on('scroll', throttle(function() {
         customParallax();
-      });
+      }, 20));
     }
   }
   // end Parallax

@@ -3,8 +3,8 @@ $mobile: width <= 568px
 $mobile-from: width >= 568px
 $tablet: width <= 768px
 $tablet-from: width >= 768px
-$desktop: width <= 1000px
-$desktop-from: width >= 1000px
+$desktop: width <= 992px
+$desktop-from: width >= 992px
 $wide: width <= 1200px
 $wide-from: width >= 1200px
 $hd: width <= 1680px
@@ -391,22 +391,30 @@ body, html
   overflow: hidden
   &__text
     display: flex
+    flex-wrap: wrap
     color: white
-    margin: 10vh 0 5vh 10vw
-    &__paragraph
+    margin: 7.5vh 0 2.5vh 10vw
+    &-paragraph
       margin-right: 1.5em
-      flex: 1 1 50%
+      margin-top: 2.5vh
+      margin-bottom: 2.5vh
+      width: 100%
+      max-width: 50%
+      flex: 0 0 50%
       &--full
         margin: 10vh 0 5vh 10vw
         color: white
+      @media($desktop)
+        flex-basis: 100%
 
-    &__heading
+    &-heading
       text-transform: uppercase
       font-size: 1.2rem
       margin-bottom: 1em
       font-weight: 700
-    &__words
-      line-height: 1.5em
+    &-words
+      line-height: 1.5
+      max-width: 570px
 
 .technologies
   display: flex
@@ -495,7 +503,7 @@ body, html
       flex-basis: 25%
     @media($hd-from)
       flex-basis: 20%
-    @media($tablet)
+    @media($desktop)
       flex-basis: 50%
     @media($mobile)
       flex-basis: 100%

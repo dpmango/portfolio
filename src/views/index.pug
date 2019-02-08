@@ -33,11 +33,11 @@ html
             .tooltip__wrapper
               .tooltip__inner
                 span telegram
-          a.tooltip(href="https://www.behance.net/mangodigital" target="_blank")
-            i.icon-behance2
+          a.tooltip(href="mailto:sergey@khmelevskoy.co" target="_blank")
+            i.icon-mail4
             .tooltip__wrapper
               .tooltip__inner
-                span behance
+                span email
           a.tooltip(href="https://github.com/dpmango" target="_blank")
             i.icon-github
             .tooltip__wrapper
@@ -80,7 +80,7 @@ html
         .hero__wrapper
           .hero__left
             .hero__name() Khmelevskoy Sergey
-            .hero__title() front-end Developer <br> <span>with UI design skills<span>
+            .hero__title() HTML/CSS/JS Expert <br> <span>React.js Front-end Developer<span>
             .hero__buttons
               a.btn.btn--hero(href="#sectionPortfolio") Portfolio
           .hero__right
@@ -172,7 +172,7 @@ html
         .about__text
           .about__text__paragraph
             .about__text__heading() Who am I ?
-            .about__text__words() My name is Sergey. I'm award-winning front-end development entrepreneur with 5 years of full-time experience under the belt located in Moscow, Russia
+            .about__text__words() My name is Sergey. I'm award-winning front-end development entrepreneur with 6 years of full-time experience under the belt. Located in Moscow, Russia
           .about__text__paragraph
             .about__text__heading() What I do ?
             .about__text__words() I specialize in user-centered interaction design and responsive web. My goal is to help SME's and startups grow with a use of cutting-edge technologies and best practices. 
@@ -185,16 +185,86 @@ html
         ul.portfolio__navi
           li.portfolio__navi__link.active(data-filter="all")
             a(href="#") All
-          li.portfolio__navi__link(data-filter="code")
-            a(href="#") Code
-          li.portfolio__navi__link(data-filter="design")
-            a(href="#") Design
+          //- li.portfolio__navi__link(data-filter="code")
+          //-   a(href="#") HTML/CSS
+          li.portfolio__navi__link(data-filter="react")
+            a(href="#") React
           li.portfolio__navi__link.portfolio__navi__link--language(data-filter-lang='en')
             a(href="#")
               i.ico.ico-en
               span EN
 
         .portfolio__list
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/runet_25.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name 25 years of runet
+              .portfolio__item__short Special promo-site in honor of 25 years since of "runet"
+              a.portfolio__item__link(href="http://runet25.surge.sh" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/rko.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name RKO
+              .portfolio__item__short Front-end development for special material in internet journal - Kto?Chto?Gde?
+              a.portfolio__item__link(href="http://kcg-rko.surge.sh/homepage.html" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/hermle.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Hermle
+              .portfolio__item__short Front-end development for Hermle
+              a.portfolio__item__link(href="https://hermle.surge.sh" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="code" data-language="ru")
+            img(src="images/portfolio/futurecom.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name futurecommerce
+              .portfolio__item__short Front-end development for mail.ru group
+              a.portfolio__item__link(href="https://mrgfuturecommerce.ru/ru" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-ru
+          .portfolio__item(data-category="all" data-language="en")
+            img(src="images/portfolio/dragons.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Dragons
+              .portfolio__item__short Front-end development Dragons rugby
+              a.portfolio__item__link(href="http://dragons-team.surge.sh" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en
+          .portfolio__item(data-category="all" data-language="en")
+            img(src="images/portfolio/cabin.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Cabin
+              .portfolio__item__short Front-end development on React.js. Main landing pages, intranet and admin resources. Rails backend API development
+              a.portfolio__item__link(href="https://cabin.com.sg" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en
+          .portfolio__item(data-category="code" data-language="en")
+            img(src="images/portfolio/axur.jpg").img-responsive
+            .portfolio__item__desc
+              .portfolio__item__name Axur
+              .portfolio__item__short Front-end development for digital intelligence & treats discovery system company based in Brazil. Lottie web json animations
+              a.portfolio__item__link(href="https://axur.surge.sh" target="_blank")
+                span() Check live
+                i.icon-github
+              .portfolio__item__lang
+                i.ico.ico-en
           .portfolio__item(data-category="code" data-language="en")
             img(src="images/portfolio/cosound.jpg").img-responsive
             .portfolio__item__desc
@@ -205,7 +275,7 @@ html
                 i.icon-github
               .portfolio__item__lang
                 i.ico.ico-en
-          .portfolio__item(data-category="code" data-language="ru")
+          .portfolio__item(data-category="all" data-language="ru")
             img(src="images/portfolio/visions.jpg").img-responsive
             .portfolio__item__desc
               .portfolio__item__name Hd-visions
@@ -236,7 +306,6 @@ html
               .portfolio__item__lang
                 i.ico.ico-ru
           
-          // next 4
           .portfolio__item(data-category="code" data-language="ru")
             img(src="images/portfolio/mice.jpg").img-responsive
             .portfolio__item__desc
@@ -278,7 +347,6 @@ html
               .portfolio__item__lang
                 i.ico.ico-en
           
-          // next 4
           .portfolio__item(data-category="code" data-language="ru")
             img(src="images/portfolio/fruto.jpg").img-responsive
             .portfolio__item__desc
@@ -320,7 +388,6 @@ html
               .portfolio__item__lang
                 i.ico.ico-ru
             
-          // next 4
           .portfolio__item(data-category="code" data-language="ru")
             img(src="images/portfolio/mashe.jpg").img-responsive
             .portfolio__item__desc
@@ -351,7 +418,7 @@ html
                 i.icon-github
               .portfolio__item__lang
                 i.ico.ico-en     
-          .portfolio__item(data-category="all" data-language="en")
+          .portfolio__item(data-category="code" data-language="en")
             img(src="images/portfolio/simplyswitch.jpg").img-responsive
             .portfolio__item__desc
               .portfolio__item__name SimplySwitch 
@@ -362,8 +429,7 @@ html
               .portfolio__item__lang
                 i.ico.ico-en   
           
-          // next 4
-          .portfolio__item(data-category="all" data-language="en")
+          .portfolio__item(data-category="code" data-language="en")
             img(src="images/portfolio/locumrocket.jpg").img-responsive
             .portfolio__item__desc
               .portfolio__item__name LocumRocket 
@@ -425,7 +491,7 @@ html
                 i.icon-link-external
               .portfolio__item__lang
                 i.ico.ico-ru
-          .portfolio__item(data-category="all" data-language="ru")
+          .portfolio__item(data-category="code" data-language="ru")
             img(src="images/portfolio/polis.jpg").img-responsive.logo-portfolio
             .portfolio__item__desc
               .portfolio__item__name POLIS812
@@ -457,7 +523,7 @@ html
                 i.icon-link-external
               .portfolio__item__lang
                 i.ico.ico-ru
-          .portfolio__item(data-category="all" data-language="en")
+          .portfolio__item(data-category="code" data-language="en")
             img(src="images/portfolio/laso.jpg").img-responsive
             .portfolio__item__desc
               .portfolio__item__name Laso Health
@@ -477,7 +543,7 @@ html
                 i.icon-github
               .portfolio__item__lang
                 i.ico.ico-en
-          .portfolio__item(data-category="all" data-language="en")
+          .portfolio__item(data-category="code" data-language="en")
             img(src="images/portfolio/bitfire.jpg").img-responsive
             .portfolio__item__desc
               .portfolio__item__name BitFire
@@ -488,17 +554,6 @@ html
               .portfolio__item__lang
                 i.ico.ico-en
             
-          // next 4
-          .portfolio__item(data-category="design" data-language="ru")
-            img(src="images/portfolio/zerno.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name Zerno market
-              .portfolio__item__short Marketpalce web-app design
-              a.portfolio__item__link(href="https://www.behance.net/gallery/46973381/Web-app-design-Zernomarket" target="_blank")
-                span() Check on behance
-                i.icon-behance2
-              .portfolio__item__lang
-                i.ico.ico-ru
           .portfolio__item(data-category="code" data-language="ru")
             img(src="images/portfolio/itboat.jpg").img-responsive
             .portfolio__item__desc
@@ -550,16 +605,6 @@ html
                 i.icon-link-external
               .portfolio__item__lang
                 i.ico.ico-ru        
-          .portfolio__item(data-category="all" data-language="ru")
-            img(src="images/portfolio/ats.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name ATS Group
-              .portfolio__item__short Site from scratch for stainless steel trading company
-              a.portfolio__item__link(href="http://ats77.ru/" target="_blank")
-                span() Check live
-                i.icon-link-external
-              .portfolio__item__lang
-                i.ico.ico-ru
           .portfolio__item(data-category="code" data-language="ru")
             img(src="images/portfolio/ortis.jpg").img-responsive
             .portfolio__item__desc
@@ -568,26 +613,6 @@ html
               a.portfolio__item__link(href="http://ortis.surge.sh/" target="_blank")
                 span() Check live
                 i.icon-link-external
-              .portfolio__item__lang
-                i.ico.ico-ru
-          .portfolio__item(data-category="design" data-language="ru")
-            img(src="images/portfolio/naty.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name Naty
-              .portfolio__item__short E-commerce website design
-              a.portfolio__item__link(href="https://www.behance.net/gallery/46894267/Naty-E-commerce-webdesign" target="_blank")
-                span() Check on behance
-                i.icon-behance2
-              .portfolio__item__lang
-                i.ico.ico-ru
-          .portfolio__item(data-category="code" data-language="ru")
-            img(src="images/portfolio/doctor.jpg").img-responsive
-            .portfolio__item__desc
-              .portfolio__item__name Doctor Frank
-              .portfolio__item__short Corporate site for a chain of medical clinics in Moscow
-              a.portfolio__item__link(href="http://dpmango.github.io/doctor-frank/dist/" target="_blank")
-                span() Check live
-                i.icon-github
               .portfolio__item__lang
                 i.ico.ico-ru
 
@@ -625,7 +650,6 @@ html
             a.contact__direct__item(href="tel:+358466461777" target="_blank")
               i.icon.icon-phone-square
               span() +7 (985) 000-62-96
-
 
 
       // Footer

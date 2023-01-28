@@ -1,5 +1,6 @@
 /* eslint-env node */
 module.exports = {
+  plugins: [require('prettier-plugin-tailwindcss')],
   semi: false,
   trailingComma: 'all',
   arrowParens: 'always',

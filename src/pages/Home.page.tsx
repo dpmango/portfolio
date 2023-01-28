@@ -16,8 +16,8 @@ export const HomePage: React.FC = () => {
       </Helmet>
 
       <div className={cns('content')}>
-        <div className="container">
-          <h1>Hello, world</h1>
+        <div className="container mx-auto">
+          <h1 className="text-2xl text-blue-600">Hello, world</h1>
         </div>
       </div>
     </Layout>

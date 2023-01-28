@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className="header">
-      <div className="container">
+      <div className="container mx-auto">
         <Link to="/" className="header__logo">
           <DevBadge />
         </Link>

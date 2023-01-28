@@ -1,7 +1,12 @@
-# gulp-starter-pack
-Gulp starter package to use with sass, autoprefixer, bootstrap, minification and other common front-end tasks
+# React + vite + typescript + eslint + autoimports
 
-To use:
-1. Install node.js, npm
-2. Run npm install
-3. Work with /src folder and get the processing result in /dist
+Build with vite & react
+
+Start in development mode:
+`yarn dev`
+
+Build for production:
+`yarn build`
+
+Lint errors (eslint + prettier)
+`yarn lint`

@@ -31,4 +31,5 @@ export const PerformanceLog = (DEV_perf: number, name: string) => {
   LOG.log(`PERF :: ${name} :: ${(DEV_perf_end - DEV_perf).toFixed(2)} ms`)
 }
 
-export const isDevelopmentSite = window.location.host.includes('localhost')
+export const isDevelopmentSite =
+  window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1')

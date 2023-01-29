@@ -2,11 +2,15 @@ import { configureStore } from '@reduxjs/toolkit'
 import type { TypedUseSelectorHook } from 'react-redux'
 import { useDispatch, useSelector } from 'react-redux'
 
-import userState from '@/core/store/user.store'
+import projectStore from '@/core/store/project.store'
+import userStore from '@/core/store/user.store'
+import widgetStore from '@/core/store/widget.store'
 
 export const store = configureStore({
   reducer: {
-    userState,
+    userStore,
+    projectStore,
+    widgetStore,
   },
 })
 

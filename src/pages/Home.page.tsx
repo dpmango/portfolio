@@ -1,10 +1,12 @@
 import { Layout } from '@c/Layout'
+import { ProjectsList } from '@c/Project'
+import { WidgetGithub } from '@c/Widget'
 import cns from 'classnames'
 import { Helmet } from 'react-helmet'
 
 export const HomePage: React.FC = () => {
   const [loaderShown, setLoaderShown] = useState<boolean>(false)
-  const { userData } = useAppSelector((state) => state.userState)
+  const { userData } = useAppSelector((state) => state.userStore)
 
   const { search } = useLocation()
   const { lockScroll, unlockScroll } = useScrollLock()
@@ -15,11 +17,10 @@ export const HomePage: React.FC = () => {
         <title>{import.meta.env.VITE_APP_APP_NAME} | Homepage</title>
       </Helmet>
 
-      <div className={cns('content')}>
-        <div className="container mx-auto">
-          <h1 className="text-2xl text-blue-600">Hello, world</h1>
-        </div>
-      </div>
+      <main className={cns('content')}>
+        <WidgetGithub />
+        <ProjectsList />
+      </main>
     </Layout>
   )
 }

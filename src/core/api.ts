@@ -50,11 +50,11 @@ export const api = async (
       requestUrl = url
     }
 
-    const { data, message, metadata, ...raw } = await ofetch(requestUrl, requestOptions)
+    const data = await ofetch(requestUrl, requestOptions)
 
     console.log(`👌 fetch ${url} ${JSON.stringify(requestOptions.params)}`, data)
 
-    return { data, metadata, raw, message, error: null }
+    return { data, error: null }
   } catch (err: any) {
     let errMessage = err?.data?.message || ''
 
@@ -73,6 +73,6 @@ export const api = async (
 
     console.log('❌ Request Error', error)
 
-    return { data: null, metadata: null, message: null, error }
+    return { data: null, error }
   }
 }

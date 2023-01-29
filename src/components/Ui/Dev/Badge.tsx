@@ -8,7 +8,7 @@ export const DevBadge: React.FC = () => {
       style={{
         position: 'absolute',
         right: 0,
-        top: '80%',
+        top: '65%',
         background: 'tomato',
         color: 'white',
         fontSize: 10,
@@ -18,7 +18,7 @@ export const DevBadge: React.FC = () => {
         padding: '0.2em 0.35em',
       }}
     >
-      DEV {APP_VERSION}
+      {APP_VERSION}
     </div>
   )
 }

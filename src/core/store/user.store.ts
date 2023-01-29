@@ -10,18 +10,19 @@ export interface IUser {
   userData: IUserDto | null
 }
 
+const initialState: IUser = {
+  loading: null,
+  userData: null,
+}
+
 export const getCurrentUser = createAsyncThunk('user/getCurrentUser', async () => {
   const { data } = await api('auth/user/', {})
 
   return data
 })
 
-const initialState: IUser = {
-  loading: null,
-  userData: null,
-}
-
-export const userState = createSlice({
+// slice
+export const userStore = createSlice({
   name: 'counter',
   initialState,
   reducers: {
@@ -48,6 +49,6 @@ export const userState = createSlice({
   },
 })
 
-export const { resetUser } = userState.actions
+export const { resetUser } = userStore.actions
 
-export default userState.reducer
+export default userStore.reducer

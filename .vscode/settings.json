@@ -6,7 +6,7 @@
     "**/node_modules": true,
     "yarn.lock": true,
     "package-lock.json": true,
-    "auto-impoorts.d.ts": true
+    "auto-imports.d.ts": true
   },
   "editor.formatOnSave": true
 }

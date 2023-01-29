@@ -1,0 +1,1 @@
+export { ProjecAtomTech } from './Tech'

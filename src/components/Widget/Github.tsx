@@ -13,7 +13,7 @@ export const WidgetGithub: React.FC = () => {
 
   useEffect(() => {
     // dispatch(getGithubInfo())
-    // dispatch(getGithubRepos())
+    dispatch(getGithubRepos())
   }, [])
 
   return (

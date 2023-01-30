@@ -24,7 +24,7 @@ export const getGithubInfo = createAsyncThunk('widget/getGithubInfo', async () =
 })
 
 export const getGithubRepos = createAsyncThunk('widget/getGithubRepos', async () => {
-  const { data } = await api('https://api.github.com/users/dpmango/repos', {})
+  const { data } = await api('github/live', {})
 
   return data
 })
